@@ -144,3 +144,43 @@ nav ul {
 .nav__profil_menu:hover .nav__profil_menu_list {
   display: flex;
 }
+
+/*
+##################################################
+                    FOOTER
+##################################################
+*/
+.table__data_article_img {
+  max-width: 150px;
+  max-height: 150px;
+}
+
+.table__data_article_status_p {
+  padding: 5px;
+  border-radius: 50px;
+  color: white;
+  background-color: green;
+}
+
+/*
+##################################################
+                    FOOTER
+##################################################
+*/
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+
+.footer {
+  display: flex;
+  position: absolute;
+  bottom: 0;
+  height: 25px !important;
+  width: 100vw;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer__credit {
+  font-family: Montserrat;
+}
+
+.footer__credit_link {}
