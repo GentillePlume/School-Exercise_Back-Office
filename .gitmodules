@@ -4,3 +4,6 @@
 [submodule "popper.js"]
 	path = popper.js
 	url = https://github.com/FezVrasta/popper.js.git
+[submodule "Font-Awesome"]
+	path = Font-Awesome
+	url = https://github.com/FortAwesome/Font-Awesome.git
