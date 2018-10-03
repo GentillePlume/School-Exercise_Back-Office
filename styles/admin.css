@@ -1,3 +1,11 @@
+main {
+  display: flex;
+  width: 100vw;
+  height: auto;
+  justify-content: center;
+  align-items: center;
+}
+
 .nav {
   display: flex;
   width: 100vw;
@@ -145,6 +153,23 @@ nav ul {
   display: flex;
 }
 
+.nav__profil_menu_list_element--separator {
+  display: flex;
+  /* height: 50px; */
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+}
+
+.nav__profil_menu_list_element--separator>div {
+  height: 1px !important;
+  width: 75%;
+  margin: 25px 0;
+  background-color: grey;
+  opacity: .5;
+}
+
 /*
 ##################################################
                     FOOTER
@@ -159,7 +184,51 @@ nav ul {
   padding: 5px;
   border-radius: 50px;
   color: white;
+}
+
+.table__data_article_status_p--draft {
+  background-color: orange;
+}
+
+.table__data_article_status_p--published {
   background-color: green;
+}
+
+.table__data_article_shortcuts--publish-no {
+  color: orange !important;
+}
+
+th {
+  vertical-align: middle !important;
+  text-align: center !important;
+  border-right: 1px solid rgba(0, 0, 0, .05) !important;
+  border-left: 1px solid rgba(0, 0, 0, .05) !important;
+}
+
+th p {
+  font-weight: normal;
+}
+
+.table__data_article_shortcuts a {
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.table__data_article_shortcut {
+  font-size: 25px;
+  margin: 0 10px;
+}
+
+.table__data_article_shortcuts--settings {
+  color: blue;
+}
+
+.table__data_article_shortcuts--delete {
+  color: red;
+}
+
+.table__data_article_shortcuts--publish {
+  color: green;
 }
 
 /*
