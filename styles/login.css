@@ -24,3 +24,7 @@ body {
   border-radius: 5px;
   background-color: white;
 }
+
+button {
+  border-radius: 0 !important;
+}
