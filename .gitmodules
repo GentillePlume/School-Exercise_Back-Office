@@ -10,3 +10,6 @@
 [submodule "animate.css"]
 	path = animate.css
 	url = https://github.com/daneden/animate.css.git
+[submodule "quill"]
+	path = quill
+	url = https://github.com/quilljs/quill.git
