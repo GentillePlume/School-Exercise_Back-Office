@@ -15,207 +15,236 @@
 
 <body>
 
-  <header>
+  <div class="quickcontrols">
 
-    <nav class="nav">
+    <div class="button__add button__add--main">
+      <img src="img/cross.svg" class="button__add_icon button__add_icon--cross"/>
+    </div>
 
-      <ul class="nav__menus">
-        <li class="nav__menu"><a href="" class="nav__menu_link">Home</a></li>
-      </ul>
+      <div class="quickcontrols__menu quickcontrols__menu--articles">
+        <div class="quickcontrols__menu_overlay quickcontrols__menu_overlay--articles"></div>
+        <p class="quickcontrols__menu_name quickcontrols__menu_name--articles animated fadeInLeft">
+          articles
+        </p>
+        <div class="button__add button__add_sub button__add_sub--articles animated zoomIn">
+          <img src="img/article.svg" class="button__add_icon"/>
+    </div>
+        </div>
 
-      <div class="nav__profil">
-        <ul class="nav__profil_menu">
-          <li class="nav__profil_name">
-            Melvin Lemoine
-          </li>
-          <ul class="nav__profil_menu_list">
-            <li class="nav__profil_menu_list_element"><a href=""><i class="fas fa-cogs"></i>Account settings</a></li>
-            <li class="nav__profil_menu_list_element"><a href=""><i class="far fa-question-circle"></i>Useless menu</a></li>
+        <div class="quickcontrols__menu quickcontrols__menu--tag">
+          <div class="quickcontrols__menu_overlay quickcontrols__menu_overlay--tag"></div>
+          <p class="quickcontrols__menu_name quickcontrols__menu_name--tag animated fadeInLeft">
+            Catégories
+          </p>
+          <div class="button__add button__add_sub button__add_sub--tag animated zoomIn">
+            <img src="img/tag.svg" class="button__add_icon"/>
+    </div>
 
-            <li class="nav__profil_menu_list_element--separator">
-              <div></div>
-            </li>
-
-            <li class="nav__profil_menu_list_element"><a href=""><i class="fas fa-sign-out-alt"></i>Log out</a></li>
-          </ul>
-        </ul>
+          </div>
+        </div>
 
 
-        <div class="nav__profil_image"></div>
-      </div>
+        <header>
 
-    </nav>
+          <nav class="nav">
 
-  </header>
+            <ul class="nav__menus">
+              <li class="nav__menu"><a href="" class="nav__menu_link">Home</a></li>
+            </ul>
 
-  <main>
+            <div class="nav__profil">
+              <ul class="nav__profil_menu">
+                <li class="nav__profil_name">
+                  Melvin Lemoine
+                </li>
+                <ul class="nav__profil_menu_list">
+                  <li class="nav__profil_menu_list_element"><a href=""><i class="fas fa-cogs"></i>Account settings</a></li>
+                  <li class="nav__profil_menu_list_element"><a href=""><i class="far fa-question-circle"></i>Useless menu</a></li>
 
-    <table class="table">
-      <thead>
-        <tr>
-          <th>
-            Image
-          </th>
-          <th>
-            Name
-          </th>
-          <th>
-            Preview
-          </th>
-          <th>
-            Created
-          </th>
-          <th>
-            Last modification
-          </th>
-          <th>
-            Status
-          </th>
-          <th>
-            Shortcuts
-          </th>
-        </tr>
-      </thead>
+                  <li class="nav__profil_menu_list_element--separator">
+                    <div></div>
+                  </li>
 
-      <tr>
-        <th class="table__data_article_img"><img src="img/articles/motorcycle.jpg" /></th>
-        <th class="table__data_article_title">
-          <p>
-            An incredible motorcycle !
-          </p>
-        </th>
-        <th class="table__data_article_desc">
-          <p>
-            Yesterday, I discovered a new motor cycle in a old garage !
-          </p>
-        </th>
-        <th class="table__data_article_created">
-          <p>
-            2 days ago
-          </p>
-        </th>
-        <th class="table__data_article_modified">
-          <p>
-            23 minutes ago
-          </p>
-        </th>
-        <th class="table__data_article_status">
-          <p class="table__data_article_status_p table__data_article_status_p--published">
-            Published
-          </p>
-        </th>
-        <th class="table__data_article_shortcuts">
-          <a><i class="fas fa-cog table__data_article_shortcut table__data_article_shortcuts--settings"></i></a>
-          <a><i class="fas fa-trash-alt table__data_article_shortcut table__data_article_shortcuts--delete"></i></a>
-          <a><i class="fas fa-toggle-on table__data_article_shortcut table__data_article_shortcuts--publish"></i></a>
-        </th>
-      </tr>
+                  <li class="nav__profil_menu_list_element"><a href=""><i class="fas fa-sign-out-alt"></i>Log out</a></li>
+                </ul>
+              </ul>
 
-      <tr>
-        <th class="table__data_article_img"><img src="img/articles/motorcycle2.jpg" /></th>
-        <th class="table__data_article_title">
-          <p>
-            The last motorcycle of Feather Industries
-          </p>
-        </th>
-        <th class="table__data_article_desc">
-          <p>
-            Yesterday, I discovered a new motor cycle in a old garage !
-          </p>
-        </th>
-        <th class="table__data_article_created">
-          <p>
-            2 days ago
-          </p>
-        </th>
-        <th class="table__data_article_modified">
-          <p>
-            23 minutes ago
-          </p>
-        </th>
-        <th class="table__data_article_status">
-          <p class="table__data_article_status_p table__data_article_status_p--draft">
-            Draft
-          </p>
-        </th>
-        <th class="table__data_article_shortcuts">
-          <a><i class="fas fa-cog table__data_article_shortcut table__data_article_shortcuts--settings"></i></a>
-          <a><i class="fas fa-trash-alt table__data_article_shortcut table__data_article_shortcuts--delete"></i></a>
-          <a><i class="fas fa-toggle-off table__data_article_shortcut table__data_article_shortcuts--publish table__data_article_shortcuts--publish-no"></i></a>
-        </th>
-      </tr>
 
-      <tr>
-        <th class="table__data_article_img"><img src="img/articles/motorcycle.jpg" /></th>
-        <th class="table__data_article_title">
-          <p>
-            An incredible motorcycle !
-          </p>
-        </th>
-        <th class="table__data_article_desc">
-          <p>
-            Yesterday, I discovered a new motor cycle in a old garage !
-          </p>
-        </th>
-        <th class="table__data_article_created">
-          <p>
-            2 days ago
-          </p>
-        </th>
-        <th class="table__data_article_modified">
-          <p>
-            23 minutes ago
-          </p>
-        </th>
-        <th class="table__data_article_status">
-          <p class="table__data_article_status_p table__data_article_status_p--published">
-            Published
-          </p>
-        </th>
-        <th class="table__data_article_shortcuts">
-          <a><i class="fas fa-cog table__data_article_shortcut table__data_article_shortcuts--settings"></i></a>
-          <a><i class="fas fa-trash-alt table__data_article_shortcut table__data_article_shortcuts--delete"></i></a>
-          <a><i class="fas fa-toggle-on table__data_article_shortcut table__data_article_shortcuts--publish"></i></a>
-        </th>
-      </tr>
+              <div class="nav__profil_image"></div>
+            </div>
 
-      <tr>
-        <th class="table__data_article_img"><img src="img/articles/motorcycle.jpg" /></th>
-        <th class="table__data_article_title">
-          <p>
-            An incredible motorcycle !
-          </p>
-        </th>
-        <th class="table__data_article_desc">
-          <p>
-            Yesterday, I discovered a new motor cycle in a old garage !
-          </p>
-        </th>
-        <th class="table__data_article_created">
-          <p>
-            2 days ago
-          </p>
-        </th>
-        <th class="table__data_article_modified">
-          <p>
-            23 minutes ago
-          </p>
-        </th>
-        <th class="table__data_article_status">
-          <p class="table__data_article_status_p table__data_article_status_p--published">
-            Published
-          </p>
-        </th>
-        <th class="table__data_article_shortcuts">
-          <a><i class="fas fa-cog table__data_article_shortcut table__data_article_shortcuts--settings"></i></a>
-          <a><i class="fas fa-trash-alt table__data_article_shortcut table__data_article_shortcuts--delete"></i></a>
-          <a><i class="fas fa-toggle-on table__data_article_shortcut table__data_article_shortcuts--publish"></i></a>
-        </th>
-      </tr>
+          </nav>
 
-    </table>
+        </header>
 
-  </main>
+        <main>
+
+          <table class="table">
+            <thead>
+              <tr>
+                <th>
+                  Image
+                </th>
+                <th>
+                  Name
+                </th>
+                <th>
+                  Preview
+                </th>
+                <th>
+                  Created
+                </th>
+                <th>
+                  Last modification
+                </th>
+                <th>
+                  Status
+                </th>
+                <th>
+                  Shortcuts
+                </th>
+              </tr>
+            </thead>
+
+            <tr>
+              <th class="table__data_article_img"><img src="img/articles/motorcycle.jpg" /></th>
+              <th class="table__data_article_title">
+                <p>
+                  An incredible motorcycle !
+                </p>
+              </th>
+              <th class="table__data_article_desc">
+                <p>
+                  Yesterday, I discovered a new motor cycle in a old garage !
+                </p>
+              </th>
+              <th class="table__data_article_created">
+                <p>
+                  2 days ago
+                </p>
+              </th>
+              <th class="table__data_article_modified">
+                <p>
+                  23 minutes ago
+                </p>
+              </th>
+              <th class="table__data_article_status">
+                <p class="table__data_article_status_p table__data_article_status_p--published">
+                  Published
+                </p>
+              </th>
+              <th class="table__data_article_shortcuts">
+                <a><i class="fas fa-cog table__data_article_shortcut table__data_article_shortcuts--settings"></i></a>
+                <a><i class="fas fa-trash-alt table__data_article_shortcut table__data_article_shortcuts--delete"></i></a>
+                <a><i class="fas fa-toggle-on table__data_article_shortcut table__data_article_shortcuts--publish"></i></a>
+              </th>
+            </tr>
+
+            <tr>
+              <th class="table__data_article_img"><img src="img/articles/motorcycle2.jpg" /></th>
+              <th class="table__data_article_title">
+                <p>
+                  The last motorcycle of Feather Industries
+                </p>
+              </th>
+              <th class="table__data_article_desc">
+                <p>
+                  Yesterday, I discovered a new motor cycle in a old garage !
+                </p>
+              </th>
+              <th class="table__data_article_created">
+                <p>
+                  2 days ago
+                </p>
+              </th>
+              <th class="table__data_article_modified">
+                <p>
+                  23 minutes ago
+                </p>
+              </th>
+              <th class="table__data_article_status">
+                <p class="table__data_article_status_p table__data_article_status_p--draft">
+                  Draft
+                </p>
+              </th>
+              <th class="table__data_article_shortcuts">
+                <a><i class="fas fa-cog table__data_article_shortcut table__data_article_shortcuts--settings"></i></a>
+                <a><i class="fas fa-trash-alt table__data_article_shortcut table__data_article_shortcuts--delete"></i></a>
+                <a><i class="fas fa-toggle-off table__data_article_shortcut table__data_article_shortcuts--publish table__data_article_shortcuts--publish-no"></i></a>
+              </th>
+            </tr>
+
+            <tr>
+              <th class="table__data_article_img"><img src="img/articles/motorcycle.jpg" /></th>
+              <th class="table__data_article_title">
+                <p>
+                  An incredible motorcycle !
+                </p>
+              </th>
+              <th class="table__data_article_desc">
+                <p>
+                  Yesterday, I discovered a new motor cycle in a old garage !
+                </p>
+              </th>
+              <th class="table__data_article_created">
+                <p>
+                  2 days ago
+                </p>
+              </th>
+              <th class="table__data_article_modified">
+                <p>
+                  23 minutes ago
+                </p>
+              </th>
+              <th class="table__data_article_status">
+                <p class="table__data_article_status_p table__data_article_status_p--published">
+                  Published
+                </p>
+              </th>
+              <th class="table__data_article_shortcuts">
+                <a><i class="fas fa-cog table__data_article_shortcut table__data_article_shortcuts--settings"></i></a>
+                <a><i class="fas fa-trash-alt table__data_article_shortcut table__data_article_shortcuts--delete"></i></a>
+                <a><i class="fas fa-toggle-on table__data_article_shortcut table__data_article_shortcuts--publish"></i></a>
+              </th>
+            </tr>
+
+            <tr>
+              <th class="table__data_article_img"><img src="img/articles/motorcycle.jpg" /></th>
+              <th class="table__data_article_title">
+                <p>
+                  An incredible motorcycle !
+                </p>
+              </th>
+              <th class="table__data_article_desc">
+                <p>
+                  Yesterday, I discovered a new motor cycle in a old garage !
+                </p>
+              </th>
+              <th class="table__data_article_created">
+                <p>
+                  2 days ago
+                </p>
+              </th>
+              <th class="table__data_article_modified">
+                <p>
+                  23 minutes ago
+                </p>
+              </th>
+              <th class="table__data_article_status">
+                <p class="table__data_article_status_p table__data_article_status_p--published">
+                  Published
+                </p>
+              </th>
+              <th class="table__data_article_shortcuts">
+                <a><i class="fas fa-cog table__data_article_shortcut table__data_article_shortcuts--settings"></i></a>
+                <a><i class="fas fa-trash-alt table__data_article_shortcut table__data_article_shortcuts--delete"></i></a>
+                <a><i class="fas fa-toggle-on table__data_article_shortcut table__data_article_shortcuts--publish"></i></a>
+              </th>
+            </tr>
+
+          </table>
+
+        </main>
 
         <footer class="footer">
           <p class="footer__credit">
@@ -223,9 +252,8 @@
           </p>
         </footer>
 
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E=" crossorigin="anonymous"></script>
-  <script src="bootstrap/dist/js/bootstrap.min.js"></script>
-  <script src="https://unpkg.com/popper.js/dist/umd/popper.min.js"></script>
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E=" crossorigin="anonymous"></script>
+        <script src="scripts/main.js"></script>
 </body>
 
 </html>
