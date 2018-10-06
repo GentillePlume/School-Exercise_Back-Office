@@ -2,4 +2,4 @@
 
 # Previews
 ## Login page
-![login page](https://i.imgur.com/M1df0Ro.jpg)
+![login page](https://i.imgur.com/HA6K1nT.jpg)
