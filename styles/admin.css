@@ -1,14 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat');
 @import url('https://fonts.googleapis.com/css?family=Megrim');
 
-main {
-  display: flex;
-  width: 100vw;
-  height: auto;
-  justify-content: center;
-  align-items: center;
-}
-
 .nav {
   display: flex;
   width: 100vw;
@@ -175,6 +167,51 @@ nav ul {
 
 /*
 ##################################################
+                  MAIN HEADER
+##################################################
+*/
+.main__header {
+  display: flex;
+  width: auto;
+  height: auto;
+  justify-content: center;
+  align-items: center;
+  /* background-color: red; */
+}
+
+.main__header>* {
+  margin: 0 25px;
+}
+
+main {
+  display: flex;
+  width: 100vw;
+  height: auto;
+  margin: 50px 0;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.main__header_info {
+  font-family: Montserrat;
+  font-size: 50px;
+}
+
+.main__header_info_nb {
+  font-size: 100px;
+}
+
+.main__header_info--articles {
+  color: blue;
+}
+
+.main__header_info--categories {
+  color: orange;
+}
+
+/*
+##################################################
                     TABLE
 ##################################################
 */
@@ -209,10 +246,6 @@ tr:nth-child(odd) {
   background-color: green;
 }
 
-.table__data_article_shortcuts--publish-no {
-  color: orange !important;
-}
-
 th {
   vertical-align: middle !important;
   text-align: center !important;
@@ -232,18 +265,24 @@ th p {
 .table__data_article_shortcut {
   font-size: 25px;
   margin: 0 10px;
+  color: grey;
+  transition: color .3s ease-in-out;
 }
 
-.table__data_article_shortcuts--settings {
-  color: blue;
+.table__data_article_shortcut--settings:hover {
+  color: black;
 }
 
-.table__data_article_shortcuts--delete {
+.table__data_article_shortcut--delete:hover {
   color: red;
 }
 
-.table__data_article_shortcuts--publish {
+.table__data_article_shortcut--publish:hover {
   color: green;
+}
+
+.table__data_article_shortcut--draft:hover {
+  color: orange;
 }
 
 /*
@@ -355,7 +394,7 @@ th p {
 
 .footer {
   display: flex;
-  position: absolute;
+  /* position: absolute; */
   bottom: 0;
   height: 25px !important;
   width: 100vw;
