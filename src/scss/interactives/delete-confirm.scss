@@ -1,12 +1,12 @@
 @import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro');
 
 .interactive{
-  display: flex;
+  display: none;
+  position: absolute;
   width: 100vw;
   height: 100vh;
   justify-content: center;
   align-items: center;
-  position: absolute;
   background-color: rgba(0,0,0,.85);
   z-index: 99;
 
@@ -16,7 +16,7 @@
     width: 750px;
     height: auto;
     flex-flow: row wrap;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
     padding: 25px 25px;
     background-color: white;
@@ -35,7 +35,7 @@
     }
 
     &_button{
-      margin-top: 25px;
+      margin: 25px 25px 0 25px;
     }
   }
 }
