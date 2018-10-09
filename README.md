@@ -2,4 +2,6 @@
 
 # Previews
 ## Login page
-![login page](https://i.imgur.com/HA6K1nT.jpg)
+![login page](https://i.imgur.com/BbsRVxh.jpg)
+## Dashboard page
+![login page](https://i.imgur.com/AGszHdC.png)
