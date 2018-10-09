@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro');
+
+.interactive{
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  background-color: rgba(0,0,0,.85);
+  z-index: 99;
+
+
+  &__box{
+    display: flex;
+    width: 750px;
+    height: auto;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-items: center;
+    padding: 25px 25px;
+    background-color: white;
+    border: 10px solid skyblue;
+
+    &_icon{
+      font-size: 100px;
+      color: orange;
+      opacity: .5;
+      margin-right: 25px;
+    }
+
+    &_message{
+      color: grey;
+      font-size: 25px;
+    }
+
+    &_button{
+      margin-top: 25px;
+    }
+  }
+}
