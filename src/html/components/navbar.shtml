@@ -19,7 +19,7 @@
           <div></div>
         </li>
 
-        <li class="nav__profil_menu_list_element"><a href=""><i class="fas fa-sign-out-alt"></i>Log out</a></li>
+        <li onclick="JavaScript:logout()" id="logout" class="nav__profil_menu_list_element"><a><i class="fas fa-sign-out-alt"></i>Log out</a></li>
       </ul>
     </ul>
 
