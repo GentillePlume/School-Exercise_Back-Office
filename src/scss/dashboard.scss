@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat');
 @import url('https://fonts.googleapis.com/css?family=Megrim');
 @import url('https://fonts.googleapis.com/css?family=Poiret+One');
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro');
 
 /*
 ##################################################
@@ -193,10 +194,6 @@ th p {
   color: red;
 }
 
-.table__data_article_shortcut--publish:hover {
-  color: green;
-}
-
-.table__data_article_shortcut--draft:hover {
-  color: orange;
+.table__data_article_shortcut--category:hover {
+  color: purple;
 }

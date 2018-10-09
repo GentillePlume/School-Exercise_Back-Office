@@ -11,6 +11,8 @@
 
 <body>
 
+  <!--#include file="interactives/delete-confirm.shtml" -->
+
   <!--#include file="partials/quickcontrols.shtml" -->
 
   <header>
@@ -22,6 +24,34 @@
   <main>
 
     <div class="main__header">
+
+      <div class="main__header_info main__header_info--articles">
+
+        <p class="main__header_info_p">
+          <span class="main__header_info_nb">42</span><br />articles
+        </p>
+
+          <div class="main__header_info_sub main__header_info_sub--articles-draft">
+            <p class="main__header_info_sub_p">
+              6 drafts
+            </p>
+          </div>
+
+          <div class="main__header_info_sub main__header_info_sub--articles-published">
+            <p class="main__header_info_sub_p">
+              36 published
+            </p>
+          </div>
+
+      </div>
+
+      <div class="main__header_info main__header_info--categories">
+
+        <p class="main__header_info_p">
+          <span class="main__header_info_nb">4</span><br />categories
+        </p>
+
+      </div>
 
       <div class="main__header_table_container">
 
@@ -35,6 +65,9 @@
               </th>
               <th>
                 Description
+              </th>
+              <th>
+                Articles
               </th>
               <th>
                 Shortcut
@@ -54,7 +87,12 @@
             </th>
             <th>
               <p>
-                Shortcut
+                13
+              </p>
+            </th>
+            <th>
+              <p>
+                !!!!!
               </p>
             </th>
           </tr>
@@ -71,7 +109,12 @@
             </th>
             <th>
               <p>
-                Shortcut
+                13
+              </p>
+            </th>
+            <th>
+              <p>
+                !!!!!
               </p>
             </th>
           </tr>
@@ -88,7 +131,12 @@
             </th>
             <th>
               <p>
-                Shortcut
+                13
+              </p>
+            </th>
+            <th>
+              <p>
+                !!!!!
               </p>
             </th>
           </tr>
@@ -105,39 +153,16 @@
             </th>
             <th>
               <p>
-                Shortcut
+                13
+              </p>
+            </th>
+            <th>
+              <p>
+                !!!!!
               </p>
             </th>
           </tr>
         </table>
-      </div>
-
-      <div class="main__header_info main__header_info--articles">
-
-        <p class="main__header_info_p">
-          <span class="main__header_info_nb">42</span><br />articles
-        </p>
-
-          <div class="main__header_info_sub main__header_info_sub--articles-draft">
-            <p class="main__header_info_sub_p">
-              6 draft
-            </p>
-          </div>
-
-          <div class="main__header_info_sub main__header_info_sub--articles-published">
-            <p class="main__header_info_sub_p">
-              36 published
-            </p>
-          </div>
-
-      </div>
-
-      <div class="main__header_info main__header_info--categories">
-
-        <p class="main__header_info_p">
-          <span class="main__header_info_nb">4</span><br />categories
-        </p>
-
       </div>
 
     </div>
@@ -197,9 +222,9 @@
           </p>
         </th>
         <th class="table__data_article_shortcuts">
-          <a><i class="fas fa-cog table__data_article_shortcut table__data_article_shortcut--settings"></i></a>
-          <a><i class="fas fa-trash-alt table__data_article_shortcut table__data_article_shortcut--delete"></i></a>
-          <a><i class="fas fa-toggle-on table__data_article_shortcut table__data_article_shortcut--publish"></i></a>
+          <a><i onClick="JavaScript:shortcut_settings()" class="fas fa-cog table__data_article_shortcut table__data_article_shortcut--settings"></i></a>
+          <a><i onClick="JavaScript:shortcut_delete()" class="fas fa-trash-alt table__data_article_shortcut table__data_article_shortcut--delete"></i></a>
+          <a><i onClick="JavaScript:shortcut_category()" class="fas fa-share-square table__data_article_shortcut table__data_article_shortcut--category"></i></a>
         </th>
       </tr>
 
@@ -231,9 +256,9 @@
           </p>
         </th>
         <th class="table__data_article_shortcuts">
-          <a><i class="fas fa-cog table__data_article_shortcut table__data_article_shortcut--settings"></i></a>
-          <a><i class="fas fa-trash-alt table__data_article_shortcut table__data_article_shortcut--delete"></i></a>
-          <a><i class="fas fa-toggle-off table__data_article_shortcut table__data_article_shortcut--draft"></i></a>
+          <a><i onClick="JavaScript:shortcut_settings()" class="fas fa-cog table__data_article_shortcut table__data_article_shortcut--settings"></i></a>
+          <a><i onClick="JavaScript:shortcut_delete()" class="fas fa-trash-alt table__data_article_shortcut table__data_article_shortcut--delete"></i></a>
+          <a><i onClick="JavaScript:shortcut_category()" class="fas fa-share-square table__data_article_shortcut table__data_article_shortcut--category"></i></a>
         </th>
       </tr>
 
@@ -265,9 +290,9 @@
           </p>
         </th>
         <th class="table__data_article_shortcuts">
-          <a><i class="fas fa-cog table__data_article_shortcut table__data_article_shortcut--settings"></i></a>
-          <a><i class="fas fa-trash-alt table__data_article_shortcut table__data_article_shortcut--delete"></i></a>
-          <a><i class="fas fa-toggle-on table__data_article_shortcut table__data_article_shortcut--publish"></i></a>
+          <a><i onClick="JavaScript:shortcut_settings()" class="fas fa-cog table__data_article_shortcut table__data_article_shortcut--settings"></i></a>
+          <a><i onClick="JavaScript:shortcut_delete()" class="fas fa-trash-alt table__data_article_shortcut table__data_article_shortcut--delete"></i></a>
+          <a><i onClick="JavaScript:shortcut_category()" class="fas fa-share-square table__data_article_shortcut table__data_article_shortcut--category"></i></a>
         </th>
       </tr>
 
@@ -299,9 +324,9 @@
           </p>
         </th>
         <th class="table__data_article_shortcuts">
-          <a><i class="fas fa-cog table__data_article_shortcut table__data_article_shortcut--settings"></i></a>
-          <a><i class="fas fa-trash-alt table__data_article_shortcut table__data_article_shortcut--delete"></i></a>
-          <a><i class="fas fa-toggle-on table__data_article_shortcut table__data_article_shortcut--publish"></i></a>
+          <a><i onClick="JavaScript:shortcut_settings()" class="fas fa-cog table__data_article_shortcut table__data_article_shortcut--settings"></i></a>
+          <a><i onClick="JavaScript:shortcut_delete()" class="fas fa-trash-alt table__data_article_shortcut table__data_article_shortcut--delete"></i></a>
+          <a><i onClick="JavaScript:shortcut_category()" class="fas fa-share-square table__data_article_shortcut table__data_article_shortcut--category"></i></a>
         </th>
       </tr>
 
@@ -328,6 +353,7 @@
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E=" crossorigin="anonymous"></script>
   <script src="scripts/main.js"></script>
   <script src="scripts/login.js"></script>
+  <script src="scripts/shortcuts.js"></script>
 </body>
 
 </html>
