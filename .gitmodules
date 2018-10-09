@@ -7,6 +7,3 @@
 [submodule "quill"]
 	path = quill
 	url = https://github.com/quilljs/quill.git
-[submodule "balloon.css"]
-	path = balloon.css
-	url = https://github.com/kazzkiq/balloon.css.git
