@@ -1,5 +1,5 @@
 {
-  "name": "css-build",
+  "name": "School exercise : back office",
   "version": "1.0.0",
   "description": "![login page](https://i.imgur.com/HA6K1nT.jpg)",
   "main": "index.js",
@@ -21,6 +21,8 @@
     "balloon-css": "^0.5.0",
     "bulma": "^0.7.1",
     "font-awesome": "^4.7.0",
+    "html-import-partials": "^1.0.1",
+    "node-sass": "^4.9.3",
     "quill": "^1.3.6"
   }
 }
