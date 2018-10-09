@@ -4,13 +4,14 @@
   "description": "![login page](https://i.imgur.com/HA6K1nT.jpg)",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "html-build": "html-import-partials src/*html -o dist"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/GentillePlume/School-Exercise_Back-Office.git"
   },
-  "author": "",
+  "author": "Gentille Plume",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/GentillePlume/School-Exercise_Back-Office/issues"
