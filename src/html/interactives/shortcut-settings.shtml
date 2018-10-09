@@ -1,0 +1,17 @@
+<div id="delete-confirm" class="interactive animated fadeIn">
+  <div id="delete-confirm__box" class="interactive__box animated bounceIn">
+
+    <p class="interactive__box_message">
+      Quick edition form
+    </p>
+
+    <button class="button is-warning is-large is-rounded">
+      cancel
+    </button>
+
+    <button class="button is-success is-large is-rounded">
+      save
+    </button>
+
+  </div>
+</div>
