@@ -62,7 +62,7 @@
           <div></div>
         </li>
 
-        <li class="nav__profil_menu_list_element"><a href=""><i class="fas fa-sign-out-alt"></i>Log out</a></li>
+        <li onclick="JavaScript:logout()" id="logout" class="nav__profil_menu_list_element"><a><i class="fas fa-sign-out-alt"></i>Log out</a></li>
       </ul>
     </ul>
 
@@ -78,100 +78,126 @@
 
     <div class="main__header">
 
-      <table class="table">
-        <thead>
+      <div class="main__header_table_container">
+
+        <h2 class="main__header_table_h2">Categories</h2>
+
+        <table class="table main__header_table">
+          <thead>
+            <tr>
+              <th>
+                Name
+              </th>
+              <th>
+                Description
+              </th>
+              <th>
+                Shortcut
+              </th>
+            </tr>
+          </thead>
           <tr>
             <th>
-              Category
+              <p>
+                Retro
+              </p>
             </th>
             <th>
-              Description
+              <p>
+                Description
+              </p>
             </th>
             <th>
-              Shortcut
+              <p>
+                Shortcut
+              </p>
             </th>
           </tr>
-        </thead>
-        <tr>
-          <th>
-            <p>
-              Retro
-            </p>
-          </th>
-          <th>
-            <p>
-              Description
-            </p>
-          </th>
-          <th>
-            <p>
-              Shortcut
-            </p>
-          </th>
-        </tr>
-        <tr>
-          <th>
-            <p>
-              Sport
-            </p>
-          </th>
-          <th>
-            <p>
-              Description
-            </p>
-          </th>
-          <th>
-            <p>
-              Shortcut
-            </p>
-          </th>
-        </tr>
-        <tr>
-          <th>
-            <p>
-              Trail
-            </p>
-          </th>
-          <th>
-            <p>
-              Description
-            </p>
-          </th>
-          <th>
-            <p>
-              Shortcut
-            </p>
-          </th>
-        </tr>
-        <tr>
-          <th>
-            <p>
-              Electric
-            </p>
-          </th>
-          <th>
-            <p>
-              Electric powered motorcycles
-            </p>
-          </th>
-          <th>
-            <p>
-              Shortcut
-            </p>
-          </th>
-        </tr>
-      </table>
+          <tr>
+            <th>
+              <p>
+                Sport
+              </p>
+            </th>
+            <th>
+              <p>
+                Description
+              </p>
+            </th>
+            <th>
+              <p>
+                Shortcut
+              </p>
+            </th>
+          </tr>
+          <tr>
+            <th>
+              <p>
+                Trail
+              </p>
+            </th>
+            <th>
+              <p>
+                Description
+              </p>
+            </th>
+            <th>
+              <p>
+                Shortcut
+              </p>
+            </th>
+          </tr>
+          <tr>
+            <th>
+              <p>
+                Electric
+              </p>
+            </th>
+            <th>
+              <p>
+                Electric powered motorcycles
+              </p>
+            </th>
+            <th>
+              <p>
+                Shortcut
+              </p>
+            </th>
+          </tr>
+        </table>
+      </div>
 
-      <p class="main__header_info main__header_info--articles">
-        <span class="main__header_info_nb">42</span> articles
-      </p>
+      <div class="main__header_info main__header_info--articles">
 
-      <p class="main__header_info main__header_info--categories">
-        <span class="main__header_info_nb">4</span> categories
-      </p>
+        <p class="main__header_info_p">
+          <span class="main__header_info_nb">42</span><br />articles
+        </p>
+
+          <div class="main__header_info_sub main__header_info_sub--articles-draft">
+            <p class="main__header_info_sub_p">
+              6 draft
+            </p>
+          </div>
+
+          <div class="main__header_info_sub main__header_info_sub--articles-published">
+            <p class="main__header_info_sub_p">
+              36 published
+            </p>
+          </div>
+
+      </div>
+
+      <div class="main__header_info main__header_info--categories">
+
+        <p class="main__header_info_p">
+          <span class="main__header_info_nb">4</span><br />categories
+        </p>
+
+      </div>
+
     </div>
 
-    <table class="table">
+    <table class="table main__table">
       <thead>
         <tr>
           <th>
@@ -336,6 +362,20 @@
 
     </table>
 
+    <nav class="pagination is-centered" role="navigation" aria-label="pagination">
+      <a class="pagination-previous">Previous</a>
+      <a class="pagination-next">Next page</a>
+      <ul class="pagination-list">
+        <li><a class="pagination-link is-current" aria-label="Goto page 1">1</a></li>
+        <li><span class="pagination-ellipsis">&hellip;</span></li>
+        <li><a class="pagination-link" aria-label="Goto page 45">45</a></li>
+        <li><a class="pagination-link" aria-label="Page 46" aria-current="page">46</a></li>
+        <li><a class="pagination-link" aria-label="Goto page 47">47</a></li>
+        <li><span class="pagination-ellipsis">&hellip;</span></li>
+        <li><a class="pagination-link" aria-label="Goto page 86">86</a></li>
+      </ul>
+    </nav>
+
   </main>
 
   <footer class="footer">
@@ -346,6 +386,7 @@
 
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E=" crossorigin="anonymous"></script>
   <script src="scripts/main.js"></script>
+  <script src="scripts/login.js"></script>
 </body>
 
 </html>
