@@ -1,6 +1,19 @@
 @charset "utf-8";
 
-@import "./admin.css";
-@import "./general.css";
-@import "./login.css";
-@import "./styles.css";
+// RESOURCES
+@import url(../../node_modules/bulma/css/bulma.min.css);
+// @import url(../../node_modules/font-awesome/css/font-awesome.min.css);
+@import url(../../node_modules/animate.css/animate.min.css);
+@import url(../../node_modules/balloon-css/balloon.min.css);
+
+// COMPONENTS
+@import "./general.scss";
+// @import "./login.scss");
+@import "./dashboard.scss";
+
+// PARTIALS
+@import "./partials/quickcontrols.scss";
+
+// COMPONENTS
+@import "./components/navbar.scss";
+@import "./components/footer.scss";

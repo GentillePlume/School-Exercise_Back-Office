@@ -1,0 +1,15 @@
+.footer {
+  display: flex;
+  /* position: absolute; */
+  bottom: 0;
+  height: 25px !important;
+  width: 100vw;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer__credit {
+  font-family: Montserrat;
+}
+
+.footer__credit_link {}

@@ -1,0 +1,5 @@
+<footer class="footer">
+  <p class="footer__credit">
+    Developed by <a href="http://melvin-lemoine.me" target="_blank" class="footer__credit_link">Melvin Lemoine</a> with <a href="https://bulma.io" target="_blank" class="footer__credit_link">Bulma</a> for <a href="https://www.digital-campus.fr/ecole/rennes" target="_blank" class="footer__credit_link">Digital Campus
+        </p>
+      </footer>

@@ -1,0 +1,30 @@
+<nav class="nav">
+
+  <ul class="nav__menus">
+    <li class="nav__menu"><a href="dashboard.html" class="nav__menu_link">dashboard</a></li>
+    <li class="nav__menu"><a href="articles.html" class="nav__menu_link">articles</a></li>
+    <li class="nav__menu"><a href="categories.html" class="nav__menu_link">categories</a></li>
+  </ul>
+
+  <div class="nav__profil">
+    <ul class="nav__profil_menu">
+      <li class="nav__profil_name">
+        Melvin Lemoine
+      </li>
+      <ul class="nav__profil_menu_list">
+        <li class="nav__profil_menu_list_element"><a href=""><i class="fas fa-cogs"></i>Account settings</a></li>
+        <li class="nav__profil_menu_list_element"><a href=""><i class="far fa-question-circle"></i>Useless menu</a></li>
+
+        <li class="nav__profil_menu_list_element--separator">
+          <div></div>
+        </li>
+
+        <li class="nav__profil_menu_list_element"><a href=""><i class="fas fa-sign-out-alt"></i>Log out</a></li>
+      </ul>
+    </ul>
+
+
+    <div class="nav__profil_image"></div>
+  </div>
+
+</nav>
