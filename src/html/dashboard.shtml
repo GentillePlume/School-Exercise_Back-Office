@@ -11,7 +11,9 @@
 
 <body>
 
-  <!--#include file="interactives/delete-confirm.shtml" -->
+  <!--#include file="interactives/shortcut-delete.shtml" -->
+  <!--#include file="interactives/shortcut-new-article.shtml" -->
+  <!--#include file="interactives/shortcut-settings.shtml" -->
 
   <!--#include file="partials/quickcontrols.shtml" -->
 
