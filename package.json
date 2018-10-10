@@ -4,28 +4,38 @@
   "description": "![login page](https://i.imgur.com/HA6K1nT.jpg)",
   "main": "index.js",
   "watch": {
-      "html-build": {
-        "patterns": [
-          "src/html"
-        ],
-        "extensions": "shtml",
-        "quiet": false
-      },
-      "css-build": {
-        "patterns": [
-          "src/scss/"
-        ],
-        "extensions": "scss",
-        "quiet": false
-      }
+    "html-build": {
+      "patterns": [
+        "src/html"
+      ],
+      "extensions": "shtml",
+      "quiet": false
     },
-    "scripts": {
-      "css-build": "node-sass --output-style=compressed --source-map=dist/css/styles.css.map src/scss/styles.scss dist/css/styles.min.css",
-      "html-build": "shtml2html -s src/html -d dist/",
-      "css-watch": "npm-watch css-build",
-      "html-watch": "npm-watch html-build",
-      "start": "concurrently 'npm:*-watch'"
+    "css-build": {
+      "patterns": [
+        "src/scss/"
+      ],
+      "extensions": "scss",
+      "quiet": false
     },
+    "js-build": {
+      "patterns": [
+        "src/js/"
+      ],
+      "extensions": "js",
+      "quiet": false
+    }
+  },
+  "scripts": {
+    "css-build": "node-sass --output-style=compressed --source-map=dist/css/styles.css.map src/scss/styles.scss dist/css/styles.min.css",
+    "html-build": "shtml2html -s src/html -d dist/",
+    "css-watch": "npm-watch css-build",
+    "html-watch": "npm-watch html-build",
+    "js-build": "copyfiles -u 2 src/js/*.js dist/js",
+    "js-watch": "npm-watch js-build",
+    "start": "concurrently 'npm:*-watch'",
+    "build": "concurrently 'npm:*-build'"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/GentillePlume/School-Exercise_Back-Office.git"
