@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="utf-8">
-  <title>Admin Panel</title>
+  <title>Admin Panel | Dashboard</title>
 
   <link rel="stylesheet" type="text/css" href="css/styles.min.css" />
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
@@ -12,7 +12,7 @@
 <body>
 
   <div id="shortcut-delete" class="interactive-popup animated fadeIn">
-  <div id="shortcut-delete__box" class="interactive-popup__box animated bounceIn">
+  <div id="shortcut-delete__box" class="interactive-popup__box animated jackInTheBox">
 
     <i class="fas fa-exclamation-circle interactive-popup__box_icon"></i>
 
@@ -31,7 +31,7 @@
   </div>
 </div>
   <div id="shortcut-new-article" class="interactive-popup interactive-popup--new-article animated fadeIn">
-  <div id="shortcut-new-article__box" class="interactive-popup__box interactive-popup__box--new-article animated bounceIn">
+  <div id="shortcut-new-article__box" class="interactive-popup__box interactive-popup__box--new-article animated jackInTheBox">
 
     <p class="interactive-popup__box_message">
       New article
@@ -120,7 +120,7 @@
   </div>
 </div>
   <div id="shortcut-settings" class="interactive-popup interactive-popup--settings animated fadeIn">
-  <div id="shortcut-settings__box" class="interactive-popup__box interactive-popup__box--settings animated bounceIn">
+  <div id="shortcut-settings__box" class="interactive-popup__box interactive-popup__box--settings animated jackInTheBox">
 
     <p class="interactive-popup__box_message">
       Quick edition
@@ -475,7 +475,7 @@
         <th class="table__data_article_shortcuts">
           <a><i onClick="JavaScript:shortcut_settings()" class="fas fa-cog table__data_article_shortcut table__data_article_shortcut--settings"></i></a>
           <a><i onClick="JavaScript:shortcut_delete()" class="fas fa-trash-alt table__data_article_shortcut table__data_article_shortcut--delete"></i></a>
-          <a><i onClick="JavaScript:shortcut_category()" class="fas fa-share-square table__data_article_shortcut table__data_article_shortcut--category"></i></a>
+          <a><i onClick="JavaScript:shortcut_category()" class="fas fa-th-list table__data_article_shortcut table__data_article_shortcut--category"></i></a>
         </th>
       </tr>
 
@@ -509,7 +509,7 @@
         <th class="table__data_article_shortcuts">
           <a><i onClick="JavaScript:shortcut_settings()" class="fas fa-cog table__data_article_shortcut table__data_article_shortcut--settings"></i></a>
           <a><i onClick="JavaScript:shortcut_delete()" class="fas fa-trash-alt table__data_article_shortcut table__data_article_shortcut--delete"></i></a>
-          <a><i onClick="JavaScript:shortcut_category()" class="fas fa-share-square table__data_article_shortcut table__data_article_shortcut--category"></i></a>
+          <a><i onClick="JavaScript:shortcut_category()" class="fas fa-th-list table__data_article_shortcut table__data_article_shortcut--category"></i></a>
         </th>
       </tr>
 
@@ -543,7 +543,7 @@
         <th class="table__data_article_shortcuts">
           <a><i onClick="JavaScript:shortcut_settings()" class="fas fa-cog table__data_article_shortcut table__data_article_shortcut--settings"></i></a>
           <a><i onClick="JavaScript:shortcut_delete()" class="fas fa-trash-alt table__data_article_shortcut table__data_article_shortcut--delete"></i></a>
-          <a><i onClick="JavaScript:shortcut_category()" class="fas fa-share-square table__data_article_shortcut table__data_article_shortcut--category"></i></a>
+          <a><i onClick="JavaScript:shortcut_category()" class="fas fa-th-list table__data_article_shortcut table__data_article_shortcut--category"></i></a>
         </th>
       </tr>
 
@@ -577,7 +577,7 @@
         <th class="table__data_article_shortcuts">
           <a><i onClick="JavaScript:shortcut_settings()" class="fas fa-cog table__data_article_shortcut table__data_article_shortcut--settings"></i></a>
           <a><i onClick="JavaScript:shortcut_delete()" class="fas fa-trash-alt table__data_article_shortcut table__data_article_shortcut--delete"></i></a>
-          <a><i onClick="JavaScript:shortcut_category()" class="fas fa-share-square table__data_article_shortcut table__data_article_shortcut--category"></i></a>
+          <a><i onClick="JavaScript:shortcut_category()" class="fas fa-th-list table__data_article_shortcut table__data_article_shortcut--category"></i></a>
         </th>
       </tr>
 
@@ -606,9 +606,9 @@
       </footer>
 
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E=" crossorigin="anonymous"></script>
-  <script src="scripts/main.js"></script>
-  <script src="scripts/login.js"></script>
-  <script src="scripts/shortcuts.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/login.js"></script>
+  <script src="js/shortcuts.js"></script>
 </body>
 
 </html>
