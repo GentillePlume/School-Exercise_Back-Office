@@ -9,8 +9,7 @@
 // LAYOUTS
 @import "./panel.scss";
 
-// COMPONENTS
-@import "./general.scss";
+// PAGES
 @import "./login.scss";
 @import "./dashboard.scss";
 
@@ -24,5 +23,9 @@
 @import "./interactives/shortcut-settings.scss";
 
 // COMPONENTS
+@import "./components/articles-table.scss";
 @import "./components/navbar.scss";
 @import "./components/footer.scss";
+
+// OTHER
+@import "./general.scss";
