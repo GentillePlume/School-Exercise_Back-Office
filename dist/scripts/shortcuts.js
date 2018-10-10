@@ -1,39 +1,45 @@
 function shortcut_settings() {
-  console.log("shortcut_settings launched");
+  console.log("shortcut-settings launched");
+
+  $("#shortcut-settings")[0].style.display = "flex";
 }
 
 function shortcut_delete() {
-  console.log("shortcut_delete launched");
+  console.log("shortcut-delete launched");
 
-  $("#delete-confirm")[0].style.display = "flex";
+  $("#shortcut-delete")[0].style.display = "flex";
 }
 
 function shortcut_category() {
-  console.log("shortcut_category launched");
+  console.log("shortcut-category launched");
 }
 
-$("#delete-confirm").click(function() {
-  console.log("close function launched");
-
-  $("#delete-confirm")[0].style.animationName = "fadeOut";
-  $("#delete-confirm__box")[0].style.animationName = "bounceOut";
-
-  setTimeout(function() {
-    $("#delete-confirm")[0].style.display = "none";
-    $("#delete-confirm")[0].style.animationName = "fadeIn";
-    $("#delete-confirm__box")[0].style.animationName = "bounceIn";
-  }, 1000);
+$("#quickcontrol-article").click(function() {
+  shortcut_new_article();
 });
 
-$(".interactive__box_button").click(function() {
-  console.log("close function launched");
+function shortcut_new_article() {
+  console.log("new article form opened");
+  $("#shortcut-new-article")[0].style.display = "flex";
+}
 
-  $("#delete-confirm")[0].style.animationName = "fadeOut";
-  $("#delete-confirm__box")[0].style.animationName = "bounceOut";
+$(".interactive-popup__box_button").click(function() {
+  console.log("close function launched by click out the box");
+
+  for (i = 0; i < $(".interactive-popup").length; i++) {
+    console.log("OUT ANIMATION = " + i);
+    $(".interactive-popup")[i].style.animationName = "fadeOut";
+    $(".interactive-popup__box")[i].style.animationName = "bounceOut";
+  }
 
   setTimeout(function() {
-    $("#delete-confirm")[0].style.display = "none";
-    $("#delete-confirm")[0].style.animationName = "fadeIn";
-    $("#delete-confirm__box")[0].style.animationName = "bounceIn";
+
+    for (i = 0; i < $(".interactive-popup").length; i++) {
+      console.log("i = " + i);
+
+      $(".interactive-popup")[i].style.display = "none";
+      $(".interactive-popup")[i].style.animationName = "fadeIn";
+      $(".interactive-popup__box")[i].style.animationName = "bounceIn";
+    }
   }, 1000);
 });
