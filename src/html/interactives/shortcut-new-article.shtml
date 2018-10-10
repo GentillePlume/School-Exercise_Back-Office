@@ -1,0 +1,89 @@
+<div id="shortcut-new-article" class="interactive-popup interactive-popup--new-article animated fadeIn">
+  <div id="shortcut-new-article__box" class="interactive-popup__box interactive-popup__box--new-article animated bounceIn">
+
+    <p class="interactive-popup__box_message">
+      New article
+    </p>
+
+    <form class="interactive-popup__box--new-article_form">
+
+      <div class="field">
+        <label class="label">Title</label>
+        <div class="control">
+          <input class="input" type="text" placeholder="Actual article title">
+        </div>
+        </div>
+
+        <div class="field">
+          <label class="label">Description</label>
+          <div class="control">
+            <textarea class="textarea" placeholder="Article content"></textarea>
+          </div>
+        </div>
+
+        <div class="field half-width">
+          <label class="label">Status</label>
+          <div class="select is-rounded">
+            <select>
+            <option disabled selected="true">Select the article status</option>
+            <option >Published</option>
+            <option>Draft</option>
+            <option>Archive</option>
+          </select>
+          </div>
+        </div>
+
+        <div class="field half-width centered">
+          <label class="label">Categories</label>
+          <label class="checkbox">
+          <input type="checkbox">
+          Retro
+        </label>
+
+          <label class="checkbox">
+          <input type="checkbox">
+          Sport
+        </label>
+
+          <label class="checkbox">
+          <input type="checkbox">
+          Trail
+        </label>
+
+          <label class="checkbox">
+          <input type="checkbox">
+          Electric
+        </label>
+
+        </div>
+
+        <label class="label is-fullwidth">Image</label>
+        <div class="file field has-name is-fullwidth">
+          <label class="file-label">
+          <input class="file-input" type="file" name="resume">
+          <span class="file-cta">
+            <span class="file-icon">
+              <i class="fas fa-upload"></i>
+            </span>
+            <span class="file-label">
+              Choose a file…
+            </span>
+          </span>
+          <!-- <span class="file-name">
+            fbmondial hipster300.png
+          </span> -->
+        </label>
+        </div>
+
+    </form>
+
+    <button class="interactive-popup__box_button button is-warning is-large is-rounded">
+      cancel
+    </button>
+
+    <button class="interactive-popup__box_button button is-success is-large is-rounded">
+      save
+    </button>
+
+  </div>
+</div>
