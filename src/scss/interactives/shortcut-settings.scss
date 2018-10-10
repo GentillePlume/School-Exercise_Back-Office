@@ -1,0 +1,23 @@
+.interactive-popup__box--settings,
+.interactive-popup__box--new-article{
+  flex-flow: row wrap;
+  max-height: 85%;
+
+  &_form{
+    display: flex;
+    flex-flow: row wrap;
+    width: 100%;
+  }
+}
+
+.interactive-popup__box .half-width{
+  max-width: 50% !important;
+}
+
+.interactive-popup__box .field{
+  width: 100% !important;
+}
+
+.interactive-popup__box label.checkbox{
+  margin: auto !important;
+}

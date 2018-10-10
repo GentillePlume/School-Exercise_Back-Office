@@ -1,17 +1,17 @@
-<div id="shortcut-delete" class="interactive animated fadeIn">
-  <div id="shortcut-delete__box" class="interactive__box animated bounceIn">
+<div id="shortcut-delete" class="interactive-popup animated fadeIn">
+  <div id="shortcut-delete__box" class="interactive-popup__box animated bounceIn">
 
-    <i class="fas fa-exclamation-circle interactive__box_icon"></i>
+    <i class="fas fa-exclamation-circle interactive-popup__box_icon"></i>
 
-    <p class="interactive__box_message">
+    <p class="interactive-popup__box_message">
       Do you really want to delete this element ?
     </p>
 
-    <button class="button is-warning is-large is-rounded">
+    <button class="interactive-popup__box_button button is-warning is-large is-rounded">
       cancel
     </button>
 
-    <button class="button is-danger is-large is-rounded">
+    <button class="interactive-popup__box_button button is-danger is-large is-rounded">
       delete
     </button>
 

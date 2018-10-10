@@ -4,7 +4,7 @@
     <img src="img/cross.svg" class="button__add_icon button__add_icon--cross"/>
   </div>
 
-    <div class="quickcontrols__menu quickcontrols__menu--articles">
+    <div id="quickcontrol-article" class="quickcontrols__menu quickcontrols__menu--articles">
       <div class="quickcontrols__menu_overlay quickcontrols__menu_overlay--articles"></div>
       <p class="quickcontrols__menu_name quickcontrols__menu_name--articles animated fadeInRight">
         articles
