@@ -3,11 +3,6 @@
 @import url('https://fonts.googleapis.com/css?family=Poiret+One');
 @import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro');
 
-/*
-##################################################
-MAIN HEADER
-##################################################
-*/
 .main__header {
   display: flex;
   width: auto;
@@ -123,76 +118,4 @@ align-items: center;
   color: white;
   font-family: "Poiret One";
   font-weight: bold;
-}
-
-/*
-##################################################
-TABLE
-##################################################
-*/
-
-.main__table{
-  margin-top: 100px;
-}
-
-tr:nth-child(even) {
-  background-color: rgb(246, 246, 246);
-}
-
-tr:nth-child(odd) {
-  background-color: white;
-}
-
-.table__data_article_img {
-  max-width: 150px;
-  max-height: 150px;
-}
-
-.table__data_article_status_p {
-  padding: 5px;
-  border-radius: 50px;
-  color: white;
-}
-
-.table__data_article_status_p--draft {
-  background-color: orange;
-}
-
-.table__data_article_status_p--published {
-  background-color: green;
-}
-
-th {
-  vertical-align: middle !important;
-  text-align: center !important;
-  border-right: 1px solid rgba(0, 0, 0, .05) !important;
-  border-left: 1px solid rgba(0, 0, 0, .05) !important;
-}
-
-th p {
-  font-weight: normal;
-}
-
-.table__data_article_shortcuts a {
-  margin-top: auto;
-  margin-bottom: auto;
-}
-
-.table__data_article_shortcut {
-  font-size: 25px;
-  margin: 0 10px;
-  color: grey;
-  transition: color .3s ease-in-out;
-}
-
-.table__data_article_shortcut--settings:hover {
-  color: black;
-}
-
-.table__data_article_shortcut--delete:hover {
-  color: red;
-}
-
-.table__data_article_shortcut--category:hover {
-  color: purple;
 }
