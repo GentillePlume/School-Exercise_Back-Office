@@ -1,9 +1,9 @@
 <nav class="nav">
 
   <ul class="nav__menus">
-    <li class="nav__menu"><a href="dashboard.html" class="nav__menu_link">dashboard</a></li>
-    <li class="nav__menu"><a href="articles.html" class="nav__menu_link">articles</a></li>
-    <li class="nav__menu"><a href="categories.html" class="nav__menu_link">categories</a></li>
+    <li class="nav__menu nav__menu--dashboard"><a href="dashboard.html" class="nav__menu_link">dashboard</a></li>
+    <li class="nav__menu nav__menu--articles"><a href="articles.html" class="nav__menu_link">articles</a></li>
+    <li class="nav__menu nav__menu--categories"><a href="categories.html" class="nav__menu_link">categories</a></li>
   </ul>
 
   <div class="nav__profil">
