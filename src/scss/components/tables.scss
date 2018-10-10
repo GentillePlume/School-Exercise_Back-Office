@@ -1,0 +1,18 @@
+tr:nth-child(even) {
+  background-color: rgb(246, 246, 246);
+}
+
+tr:nth-child(odd) {
+  background-color: white;
+}
+
+th {
+  vertical-align: middle !important;
+  text-align: center !important;
+  border-right: 1px solid rgba(0, 0, 0, .05) !important;
+  border-left: 1px solid rgba(0, 0, 0, .05) !important;
+}
+
+th p {
+  font-weight: normal;
+}
