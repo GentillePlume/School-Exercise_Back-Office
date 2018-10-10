@@ -15,8 +15,10 @@
 @import "./partials/quickcontrols.scss";
 
 // INTERACTIVE
-@import "./interactives/shortcut_delete.scss";
-@import "./interactives/shortcut_settings.scss";
+@import "./interactives/interactives-popups.scss";
+
+@import "./interactives/shortcut-delete.scss";
+@import "./interactives/shortcut-settings.scss";
 
 // COMPONENTS
 @import "./components/navbar.scss";
