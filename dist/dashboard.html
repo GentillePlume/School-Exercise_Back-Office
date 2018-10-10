@@ -11,13 +11,211 @@
 
 <body>
 
+  <div id="shortcut-delete" class="interactive-popup animated fadeIn">
+  <div id="shortcut-delete__box" class="interactive-popup__box animated bounceIn">
+
+    <i class="fas fa-exclamation-circle interactive-popup__box_icon"></i>
+
+    <p class="interactive-popup__box_message">
+      Do you really want to delete this element ?
+    </p>
+
+    <button class="interactive-popup__box_button button is-warning is-large is-rounded">
+      cancel
+    </button>
+
+    <button class="interactive-popup__box_button button is-danger is-large is-rounded">
+      delete
+    </button>
+
+  </div>
+</div>
+  <div id="shortcut-new-article" class="interactive-popup interactive-popup--new-article animated fadeIn">
+  <div id="shortcut-new-article__box" class="interactive-popup__box interactive-popup__box--new-article animated bounceIn">
+
+    <p class="interactive-popup__box_message">
+      New article
+    </p>
+
+    <form class="interactive-popup__box--new-article_form">
+
+      <div class="field">
+        <label class="label">Title</label>
+        <div class="control">
+          <input class="input" type="text" placeholder="Actual article title">
+        </div>
+        </div>
+
+        <div class="field">
+          <label class="label">Description</label>
+          <div class="control">
+            <textarea class="textarea" placeholder="Article content"></textarea>
+          </div>
+        </div>
+
+        <div class="field half-width">
+          <label class="label">Status</label>
+          <div class="select is-rounded">
+            <select>
+            <option disabled selected="true">Select the article status</option>
+            <option >Published</option>
+            <option>Draft</option>
+            <option>Archive</option>
+          </select>
+          </div>
+        </div>
+
+        <div class="field half-width centered">
+          <label class="label">Categories</label>
+          <label class="checkbox">
+          <input type="checkbox">
+          Retro
+        </label>
+
+          <label class="checkbox">
+          <input type="checkbox">
+          Sport
+        </label>
+
+          <label class="checkbox">
+          <input type="checkbox">
+          Trail
+        </label>
+
+          <label class="checkbox">
+          <input type="checkbox">
+          Electric
+        </label>
+
+        </div>
+
+        <label class="label is-fullwidth">Image</label>
+        <div class="file field has-name is-fullwidth">
+          <label class="file-label">
+          <input class="file-input" type="file" name="resume">
+          <span class="file-cta">
+            <span class="file-icon">
+              <i class="fas fa-upload"></i>
+            </span>
+            <span class="file-label">
+              Choose a file…
+            </span>
+          </span>
+          <!-- <span class="file-name">
+            fbmondial hipster300.png
+          </span> -->
+        </label>
+        </div>
+
+    </form>
+
+    <button class="interactive-popup__box_button button is-warning is-large is-rounded">
+      cancel
+    </button>
+
+    <button class="interactive-popup__box_button button is-success is-large is-rounded">
+      save
+    </button>
+
+  </div>
+</div>
+  <div id="shortcut-settings" class="interactive-popup interactive-popup--settings animated fadeIn">
+  <div id="shortcut-settings__box" class="interactive-popup__box interactive-popup__box--settings animated bounceIn">
+
+    <p class="interactive-popup__box_message">
+      Quick edition
+    </p>
+
+    <form class="interactive-popup__box--settings_form">
+
+      <div class="field">
+        <label class="label">Title</label>
+        <div class="control">
+          <input class="input" type="text" placeholder="Actual article title" value="An incredible motorcycle !">
+        </div>
+        </div>
+
+        <div class="field">
+          <label class="label">Description</label>
+          <div class="control">
+            <textarea class="textarea" placeholder="Article content">Yesterday, I discovered a new motor cycle in a old garage !</textarea>
+          </div>
+        </div>
+
+        <div class="field half-width">
+          <label class="label">Status</label>
+          <div class="select is-rounded">
+            <select>
+            <option disabled >Select the article status</option>
+            <option selected="true">Published</option>
+            <option>Draft</option>
+            <option>Archive</option>
+          </select>
+          </div>
+        </div>
+
+        <div class="field half-width">
+          <label class="label">Categories</label>
+          <label class="checkbox">
+          <input type="checkbox" checked>
+          Retro
+        </label>
+
+          <label class="checkbox">
+          <input type="checkbox">
+          Sport
+        </label>
+
+          <label class="checkbox">
+          <input type="checkbox">
+          Trail
+        </label>
+
+          <label class="checkbox">
+          <input type="checkbox">
+          Electric
+        </label>
+
+        </div>
+
+        <label class="label is-fullwidth">Image</label>
+        <div class="file field has-name is-fullwidth">
+          <label class="file-label">
+          <input class="file-input" type="file" name="resume">
+          <span class="file-cta">
+            <span class="file-icon">
+              <i class="fas fa-upload"></i>
+            </span>
+            <span class="file-label">
+              Choose a file…
+            </span>
+          </span>
+          <span class="file-name">
+            fbmondial hipster300.png
+          </span>
+        </label>
+        </div>
+
+    </form>
+
+    <button class="interactive-popup__box_button button is-warning is-large is-rounded">
+      cancel
+    </button>
+
+    <button class="interactive-popup__box_button button is-success is-large is-rounded">
+      save
+    </button>
+
+  </div>
+</div>
+
   <div class="quickcontrols">
 
   <div class="button__add button__add--main">
     <img src="img/cross.svg" class="button__add_icon button__add_icon--cross"/>
   </div>
 
-    <div class="quickcontrols__menu quickcontrols__menu--articles">
+    <div id="quickcontrol-article" class="quickcontrols__menu quickcontrols__menu--articles">
       <div class="quickcontrols__menu_overlay quickcontrols__menu_overlay--articles"></div>
       <p class="quickcontrols__menu_name quickcontrols__menu_name--articles animated fadeInRight">
         articles
@@ -78,6 +276,34 @@
 
     <div class="main__header">
 
+      <div class="main__header_info main__header_info--articles">
+
+        <p class="main__header_info_p">
+          <span class="main__header_info_nb">42</span><br />articles
+        </p>
+
+          <div class="main__header_info_sub main__header_info_sub--articles-draft">
+            <p class="main__header_info_sub_p">
+              6 drafts
+            </p>
+          </div>
+
+          <div class="main__header_info_sub main__header_info_sub--articles-published">
+            <p class="main__header_info_sub_p">
+              36 published
+            </p>
+          </div>
+
+      </div>
+
+      <div class="main__header_info main__header_info--categories">
+
+        <p class="main__header_info_p">
+          <span class="main__header_info_nb">4</span><br />categories
+        </p>
+
+      </div>
+
       <div class="main__header_table_container">
 
         <h2 class="main__header_table_h2">Categories</h2>
@@ -90,6 +316,9 @@
               </th>
               <th>
                 Description
+              </th>
+              <th>
+                Articles
               </th>
               <th>
                 Shortcut
@@ -109,7 +338,12 @@
             </th>
             <th>
               <p>
-                Shortcut
+                13
+              </p>
+            </th>
+            <th>
+              <p>
+                !!!!!
               </p>
             </th>
           </tr>
@@ -126,7 +360,12 @@
             </th>
             <th>
               <p>
-                Shortcut
+                13
+              </p>
+            </th>
+            <th>
+              <p>
+                !!!!!
               </p>
             </th>
           </tr>
@@ -143,7 +382,12 @@
             </th>
             <th>
               <p>
-                Shortcut
+                13
+              </p>
+            </th>
+            <th>
+              <p>
+                !!!!!
               </p>
             </th>
           </tr>
@@ -160,39 +404,16 @@
             </th>
             <th>
               <p>
-                Shortcut
+                13
+              </p>
+            </th>
+            <th>
+              <p>
+                !!!!!
               </p>
             </th>
           </tr>
         </table>
-      </div>
-
-      <div class="main__header_info main__header_info--articles">
-
-        <p class="main__header_info_p">
-          <span class="main__header_info_nb">42</span><br />articles
-        </p>
-
-          <div class="main__header_info_sub main__header_info_sub--articles-draft">
-            <p class="main__header_info_sub_p">
-              6 draft
-            </p>
-          </div>
-
-          <div class="main__header_info_sub main__header_info_sub--articles-published">
-            <p class="main__header_info_sub_p">
-              36 published
-            </p>
-          </div>
-
-      </div>
-
-      <div class="main__header_info main__header_info--categories">
-
-        <p class="main__header_info_p">
-          <span class="main__header_info_nb">4</span><br />categories
-        </p>
-
       </div>
 
     </div>
@@ -252,9 +473,9 @@
           </p>
         </th>
         <th class="table__data_article_shortcuts">
-          <a><i class="fas fa-cog table__data_article_shortcut table__data_article_shortcut--settings"></i></a>
-          <a><i class="fas fa-trash-alt table__data_article_shortcut table__data_article_shortcut--delete"></i></a>
-          <a><i class="fas fa-toggle-on table__data_article_shortcut table__data_article_shortcut--publish"></i></a>
+          <a><i onClick="JavaScript:shortcut_settings()" class="fas fa-cog table__data_article_shortcut table__data_article_shortcut--settings"></i></a>
+          <a><i onClick="JavaScript:shortcut_delete()" class="fas fa-trash-alt table__data_article_shortcut table__data_article_shortcut--delete"></i></a>
+          <a><i onClick="JavaScript:shortcut_category()" class="fas fa-share-square table__data_article_shortcut table__data_article_shortcut--category"></i></a>
         </th>
       </tr>
 
@@ -286,9 +507,9 @@
           </p>
         </th>
         <th class="table__data_article_shortcuts">
-          <a><i class="fas fa-cog table__data_article_shortcut table__data_article_shortcut--settings"></i></a>
-          <a><i class="fas fa-trash-alt table__data_article_shortcut table__data_article_shortcut--delete"></i></a>
-          <a><i class="fas fa-toggle-off table__data_article_shortcut table__data_article_shortcut--draft"></i></a>
+          <a><i onClick="JavaScript:shortcut_settings()" class="fas fa-cog table__data_article_shortcut table__data_article_shortcut--settings"></i></a>
+          <a><i onClick="JavaScript:shortcut_delete()" class="fas fa-trash-alt table__data_article_shortcut table__data_article_shortcut--delete"></i></a>
+          <a><i onClick="JavaScript:shortcut_category()" class="fas fa-share-square table__data_article_shortcut table__data_article_shortcut--category"></i></a>
         </th>
       </tr>
 
@@ -320,9 +541,9 @@
           </p>
         </th>
         <th class="table__data_article_shortcuts">
-          <a><i class="fas fa-cog table__data_article_shortcut table__data_article_shortcut--settings"></i></a>
-          <a><i class="fas fa-trash-alt table__data_article_shortcut table__data_article_shortcut--delete"></i></a>
-          <a><i class="fas fa-toggle-on table__data_article_shortcut table__data_article_shortcut--publish"></i></a>
+          <a><i onClick="JavaScript:shortcut_settings()" class="fas fa-cog table__data_article_shortcut table__data_article_shortcut--settings"></i></a>
+          <a><i onClick="JavaScript:shortcut_delete()" class="fas fa-trash-alt table__data_article_shortcut table__data_article_shortcut--delete"></i></a>
+          <a><i onClick="JavaScript:shortcut_category()" class="fas fa-share-square table__data_article_shortcut table__data_article_shortcut--category"></i></a>
         </th>
       </tr>
 
@@ -354,9 +575,9 @@
           </p>
         </th>
         <th class="table__data_article_shortcuts">
-          <a><i class="fas fa-cog table__data_article_shortcut table__data_article_shortcut--settings"></i></a>
-          <a><i class="fas fa-trash-alt table__data_article_shortcut table__data_article_shortcut--delete"></i></a>
-          <a><i class="fas fa-toggle-on table__data_article_shortcut table__data_article_shortcut--publish"></i></a>
+          <a><i onClick="JavaScript:shortcut_settings()" class="fas fa-cog table__data_article_shortcut table__data_article_shortcut--settings"></i></a>
+          <a><i onClick="JavaScript:shortcut_delete()" class="fas fa-trash-alt table__data_article_shortcut table__data_article_shortcut--delete"></i></a>
+          <a><i onClick="JavaScript:shortcut_category()" class="fas fa-share-square table__data_article_shortcut table__data_article_shortcut--category"></i></a>
         </th>
       </tr>
 
@@ -387,6 +608,7 @@
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E=" crossorigin="anonymous"></script>
   <script src="scripts/main.js"></script>
   <script src="scripts/login.js"></script>
+  <script src="scripts/shortcuts.js"></script>
 </body>
 
 </html>
