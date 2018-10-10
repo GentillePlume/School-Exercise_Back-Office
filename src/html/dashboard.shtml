@@ -356,6 +356,10 @@
   <script src="js/main.js"></script>
   <script src="js/login.js"></script>
   <script src="js/shortcuts.js"></script>
+  <script src="js/nav-selector.js"></script>
+  <script type="text/javascript">
+    nav_selector("dashboard");
+  </script>
 </body>
 
 </html>
