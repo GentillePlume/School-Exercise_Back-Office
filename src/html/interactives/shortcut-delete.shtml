@@ -1,5 +1,5 @@
 <div id="shortcut-delete" class="interactive-popup animated fadeIn">
-  <div id="shortcut-delete__box" class="interactive-popup__box animated bounceIn">
+  <div id="shortcut-delete__box" class="interactive-popup__box animated jackInTheBox">
 
     <i class="fas fa-exclamation-circle interactive-popup__box_icon"></i>
 

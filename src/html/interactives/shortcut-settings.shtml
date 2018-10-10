@@ -1,5 +1,5 @@
 <div id="shortcut-settings" class="interactive-popup interactive-popup--settings animated fadeIn">
-  <div id="shortcut-settings__box" class="interactive-popup__box interactive-popup__box--settings animated bounceIn">
+  <div id="shortcut-settings__box" class="interactive-popup__box interactive-popup__box--settings animated jackInTheBox">
 
     <p class="interactive-popup__box_message">
       Quick edition

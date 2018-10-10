@@ -1,5 +1,5 @@
 <div id="shortcut-new-article" class="interactive-popup interactive-popup--new-article animated fadeIn">
-  <div id="shortcut-new-article__box" class="interactive-popup__box interactive-popup__box--new-article animated bounceIn">
+  <div id="shortcut-new-article__box" class="interactive-popup__box interactive-popup__box--new-article animated jackInTheBox">
 
     <p class="interactive-popup__box_message">
       New article
