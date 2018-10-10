@@ -6,6 +6,9 @@
 @import url(../../node_modules/animate.css/animate.min.css);
 @import url(../../node_modules/balloon-css/balloon.min.css);
 
+// LAYOUTS
+@import "./panel.scss";
+
 // COMPONENTS
 @import "./general.scss";
 @import "./login.scss";
