@@ -39,7 +39,7 @@ $(".interactive-popup__box_button").click(function() {
 
       $(".interactive-popup")[i].style.display = "none";
       $(".interactive-popup")[i].style.animationName = "fadeIn";
-      $(".interactive-popup__box")[i].style.animationName = "bounceIn";
+      $(".interactive-popup__box")[i].style.animationName = "jackInTheBox";
     }
   }, 1000);
 });
