@@ -8,6 +8,44 @@ Install the project
 npm install
 ```
 
+# Use
+## Build code
+Build CSS
+```terminal
+npm run css-build
+```
+Build HTML
+```terminal
+npm run html-build
+```
+Build images
+```terminal
+npm run img-build
+```
+
+## Watch code (build element after modification)
+Watch CSS
+```terminal
+npm run css-watch
+```
+Watch HTML
+```terminal
+npm run html-watch
+```
+Watch images
+```terminal
+npm run img-watch
+```
+
+## Generic commands
+Watch elements after each modification
+```terminal
+npm run start
+```
+Build all elements
+```terminal
+npm run build
+```
 
 # Previews
 ## Login page
