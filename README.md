@@ -38,7 +38,7 @@ npm run img-watch
 ```
 
 ## Generic commands
-Watch elements after each modification
+Watch all elements
 ```terminal
 npm run start
 ```
