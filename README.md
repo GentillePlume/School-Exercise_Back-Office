@@ -9,7 +9,7 @@ npm install
 ```
 
 # Use
-## Build code
+## 🛠 Build
 Build CSS
 ```terminal
 npm run css-build
@@ -23,7 +23,7 @@ Build images
 npm run img-build
 ```
 
-## Watch code (build element after modification)
+## 🔬 Watch (build element after modification)
 Watch CSS
 ```terminal
 npm run css-watch
