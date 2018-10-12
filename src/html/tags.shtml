@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Admin Panel | Articles</title>
+
+  <link rel="stylesheet" type="text/css" href="css/styles.min.css" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+</head>
+
+<body>
+
+  <!--#include file="interactives/shortcut_delete.shtml" -->
+  <!--#include file="interactives/shortcut-tags_new.shtml" -->
+  <!--#include file="interactives/shortcut-articles_new.shtml" -->
+  <!--#include file="interactives/shortcut-tags_edit.shtml" -->
+
+  <!--#include file="partials/quickcontrols.shtml" -->
+
+  <header>
+
+    <!--#include file="components/navbar.shtml" -->
+
+  </header>
+
+  <main class="main">
+
+    <div class="main__header main__header--tags">
+
+      <div class="main__header_info main__header_info--tags">
+
+        <p class="main__header_info_p">
+          <span class="main__header_info_nb">4</span><br />tags
+        </p>
+
+          <div class="main__header_info_sub main-tags__header_info_sub main-tags__header_info_sub--untagged">
+            <p class="main__header_info_sub_p">
+              6<br />untagged
+          </p>
+          </div>
+
+          <div class="main__header_info_sub main-tags__header_info_sub main-tags__header_info_sub--tagged">
+            <p class="main__header_info_sub_p">
+              36<br />tagged
+          </p>
+          </div>
+
+      </div>
+
+      <div class="box main-tags__header_filters_container">
+
+        <img src="img/loader.svg" class="main__header_filters_container_loader"/>
+
+        <h2 class="main__header_filters_h2">filters</h2>
+
+        <div class="field">
+          <label class="label">Search</label>
+          <p class="control has-icons-left">
+            <input class="input main__header_filters_input" type="text" placeholder="Type a word">
+            <span class="icon is-small is-left">
+              <i class="fas fa-search"></i>
+            </span>
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+
+    <!--#include file="components/tags-table.shtml" -->
+
+  </main>
+
+  <!--#include file="components/footer.shtml" -->
+
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E=" crossorigin="anonymous"></script>
+  <script src="js/main.js"></script>
+  <script src="js/login.js"></script>
+  <script src="js/shortcuts.js"></script>
+  <script src="js/search.js"></script>
+  <script src="js/nav-selector.js"></script>
+  <script src="../node_modules/quill/dist/quill.min.js"></script>
+  <script type="text/javascript">
+    nav_selector("tags");
+  </script>
+  <script>
+    var quill = new Quill('#editor-tags_new', {
+      theme: 'snow',
+      placeholder: 'Category description...'
+    });
+    var quill2 = new Quill('#editor-tags_edit', {
+      theme: 'snow'
+    });
+    var quill3 = new Quill('#editor-articles_new', {
+      theme: 'snow'
+    });
+  </script>
+</body>
+
+</html>

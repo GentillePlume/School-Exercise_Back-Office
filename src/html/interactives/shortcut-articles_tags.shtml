@@ -1,0 +1,41 @@
+<div id="shortcut-articles_tags" class="interactive-popup interactive-popup--new-article animated fadeIn">
+  <div id="shortcut-articles_tags__box" class="interactive-popup__box interactive-popup__box--new-article animated jackInTheBox">
+
+    <p class="interactive-popup__box_message">
+      Select tag(s)
+    </p>
+
+    <form class="interactive-popup__box--tags_selection">
+
+      <label class="control-KY control--checkbox">Retro
+          <input type="checkbox" id="Retro"/>
+          <div class="control__indicator"></div>
+        </label>
+
+      <label class="control-KY control--checkbox">Sport
+          <input type="checkbox" id="Sport"/>
+          <div class="control__indicator"></div>
+        </label>
+
+      <label class="control-KY control--checkbox">Trail
+          <input type="checkbox" id="Trail"/>
+          <div class="control__indicator"></div>
+        </label>
+
+      <label class="control-KY control--checkbox">Electric
+          <input type="checkbox" id="Electric"/>
+          <div class="control__indicator"></div>
+        </label>
+
+    </form>
+
+    <button class="interactive-popup__box_button button is-warning is-large is-rounded">
+      cancel
+    </button>
+
+    <button class="interactive-popup__box_button button is-success is-large is-rounded">
+      save
+    </button>
+
+  </div>
+</div>

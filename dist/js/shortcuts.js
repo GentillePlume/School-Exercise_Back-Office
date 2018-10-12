@@ -1,26 +1,43 @@
-function shortcut_settings() {
+function shortcut_articles_edit() {
   console.log("shortcut-settings launched");
 
   $("#shortcut-settings")[0].style.display = "flex";
 }
 
+function shortcut_tags_edit() {
+  console.log("shortcut-settings launched");
+
+  $("#shortcut-tags_edit")[0].style.display = "flex";
+}
+
 function shortcut_delete() {
   console.log("shortcut-delete launched");
 
-  $("#shortcut-delete")[0].style.display = "flex";
+  $("#shortcut_delete")[0].style.display = "flex";
 }
 
-function shortcut_category() {
+function shortcut_articles_tags() {
   console.log("shortcut-category launched");
+
+  $("#shortcut-articles_tags")[0].style.display = "flex";
 }
 
-$("#quickcontrol-article").click(function() {
-  shortcut_new_article();
+$(".button__add_sub--article").click(function() {
+  shortcut_articles_new();
 });
 
-function shortcut_new_article() {
+$(".button__add_sub--tag").click(function() {
+  shortcut_tags_new();
+});
+
+function shortcut_articles_new() {
   console.log("new article form opened");
   $("#shortcut-new-article")[0].style.display = "flex";
+}
+
+function shortcut_tags_new() {
+  console.log("new tag form opened");
+  $("#shortcut-tags_new")[0].style.display = "flex";
 }
 
 $(".interactive-popup__box_button").click(function() {

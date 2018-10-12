@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro');
+
+.interactive-popup{
+
+  &__box{
+    display: flex;
+    width: 750px;
+    height: auto;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 25px 25px;
+    background-color: white;
+    border: 10px solid skyblue;
+
+    &_icon{
+      font-size: 100px;
+      color: orange;
+      opacity: .5;
+      margin-right: 25px;
+    }
+
+    &_message{
+      color: grey;
+      font-size: 25px;
+    }
+
+    &_button{
+      margin: 25px 25px 0 25px;
+    }
+  }
+}

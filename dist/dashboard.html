@@ -7,29 +7,12 @@
 
   <link rel="stylesheet" type="text/css" href="css/styles.min.css" />
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+  <!-- <script src="../node_modules/chartjs/chart.js"></script> -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.min.js"></script>
 </head>
 
 <body>
 
-  <div id="shortcut-delete" class="interactive-popup animated fadeIn">
-  <div id="shortcut-delete__box" class="interactive-popup__box animated jackInTheBox">
-
-    <i class="fas fa-exclamation-circle interactive-popup__box_icon"></i>
-
-    <p class="interactive-popup__box_message">
-      Do you really want to delete this element ?
-    </p>
-
-    <button class="interactive-popup__box_button button is-warning is-large is-rounded">
-      cancel
-    </button>
-
-    <button class="interactive-popup__box_button button is-danger is-large is-rounded">
-      delete
-    </button>
-
-  </div>
-</div>
   <div id="shortcut-new-article" class="interactive-popup interactive-popup--new-article animated fadeIn">
   <div id="shortcut-new-article__box" class="interactive-popup__box interactive-popup__box--new-article animated jackInTheBox">
 
@@ -42,14 +25,20 @@
       <div class="field">
         <label class="label">Title</label>
         <div class="control">
-          <input class="input" type="text" placeholder="Actual article title">
+          <input class="input" type="text" placeholder="Article title">
         </div>
         </div>
 
-        <div class="field">
+        <!-- <div class="field">
           <label class="label">Description</label>
           <div class="control">
             <textarea class="textarea" placeholder="Article content"></textarea>
+          </div>
+        </div> -->
+
+        <div id="editor-container" class="box box--editor">
+          <div id="editor-articles_new">
+            <p><br></p>
           </div>
         </div>
 
@@ -67,25 +56,25 @@
 
         <div class="field half-width centered">
           <label class="label">Categories</label>
-          <label class="checkbox">
-          <input type="checkbox">
-          Retro
-        </label>
+          <label class="control-KY control--checkbox">Retro
+        		<input type="checkbox" id="Retro"/>
+        		<div class="control__indicator"></div>
+        	</label>
 
-          <label class="checkbox">
-          <input type="checkbox">
-          Sport
-        </label>
+          <label class="control-KY control--checkbox">Sport
+        		<input type="checkbox" id="Sport"/>
+        		<div class="control__indicator"></div>
+        	</label>
 
-          <label class="checkbox">
-          <input type="checkbox">
-          Trail
-        </label>
+          <label class="control-KY control--checkbox">Trail
+        		<input type="checkbox" id="Trail"/>
+        		<div class="control__indicator"></div>
+        	</label>
 
-          <label class="checkbox">
-          <input type="checkbox">
-          Electric
-        </label>
+          <label class="control-KY control--checkbox">Electric
+        		<input type="checkbox" id="Electric"/>
+        		<div class="control__indicator"></div>
+        	</label>
 
         </div>
 
@@ -101,9 +90,6 @@
               Choose a file…
             </span>
           </span>
-          <!-- <span class="file-name">
-            fbmondial hipster300.png
-          </span> -->
         </label>
         </div>
 
@@ -119,81 +105,26 @@
 
   </div>
 </div>
-  <div id="shortcut-settings" class="interactive-popup interactive-popup--settings animated fadeIn">
-  <div id="shortcut-settings__box" class="interactive-popup__box interactive-popup__box--settings animated jackInTheBox">
+  <div id="shortcut-tags_new" class="interactive-popup interactive-popup--new-article animated fadeIn">
+  <div id="shortcut-tags_new__box" class="interactive-popup__box interactive-popup__box--new-article animated jackInTheBox">
 
     <p class="interactive-popup__box_message">
-      Quick edition
+      New category
     </p>
 
-    <form class="interactive-popup__box--settings_form">
+    <form class="interactive-popup__box--new-article_form">
 
       <div class="field">
         <label class="label">Title</label>
         <div class="control">
-          <input class="input" type="text" placeholder="Actual article title" value="An incredible motorcycle !">
+          <input class="input" type="text" placeholder="Category title">
         </div>
         </div>
 
-        <div class="field">
-          <label class="label">Description</label>
-          <div class="control">
-            <textarea class="textarea" placeholder="Article content">Yesterday, I discovered a new motor cycle in a old garage !</textarea>
+        <div id="editor-container" class="box box--editor">
+          <div id="editor-tags_new">
+            <p><br></p>
           </div>
-        </div>
-
-        <div class="field half-width">
-          <label class="label">Status</label>
-          <div class="select is-rounded">
-            <select>
-            <option disabled >Select the article status</option>
-            <option selected="true">Published</option>
-            <option>Draft</option>
-            <option>Archive</option>
-          </select>
-          </div>
-        </div>
-
-        <div class="field half-width">
-          <label class="label">Categories</label>
-          <label class="checkbox">
-          <input type="checkbox" checked>
-          Retro
-        </label>
-
-          <label class="checkbox">
-          <input type="checkbox">
-          Sport
-        </label>
-
-          <label class="checkbox">
-          <input type="checkbox">
-          Trail
-        </label>
-
-          <label class="checkbox">
-          <input type="checkbox">
-          Electric
-        </label>
-
-        </div>
-
-        <label class="label is-fullwidth">Image</label>
-        <div class="file field has-name is-fullwidth">
-          <label class="file-label">
-          <input class="file-input" type="file" name="resume">
-          <span class="file-cta">
-            <span class="file-icon">
-              <i class="fas fa-upload"></i>
-            </span>
-            <span class="file-label">
-              Choose a file…
-            </span>
-          </span>
-          <span class="file-name">
-            fbmondial hipster300.png
-          </span>
-        </label>
         </div>
 
     </form>
@@ -220,16 +151,17 @@
       <p class="quickcontrols__menu_name quickcontrols__menu_name--articles animated fadeInRight">
         articles
       </p>
-      <div class="button__add button__add_sub button__add_sub--articles animated">
+      <div class="button__add button__add_sub button__add_sub--article animated">
         <img src="img/article.svg" class="button__add_icon"/>
     </div>
       </div>
 
-      <div class="quickcontrols__menu quickcontrols__menu--tag">
+      <div id="quickcontrol-tag" class="quickcontrols__menu quickcontrols__menu--tag">
         <div class="quickcontrols__menu_overlay quickcontrols__menu_overlay--tag"></div>
         <p class="quickcontrols__menu_name quickcontrols__menu_name--tag animated fadeInRight">
           Catégories
         </p>
+
         <div class="button__add button__add_sub button__add_sub--tag animated">
           <img src="img/tag.svg" class="button__add_icon"/>
     </div>
@@ -244,7 +176,7 @@
   <ul class="nav__menus">
     <li class="nav__menu nav__menu--dashboard"><a href="dashboard.html" class="nav__menu_link">dashboard</a></li>
     <li class="nav__menu nav__menu--articles"><a href="articles.html" class="nav__menu_link">articles</a></li>
-    <li class="nav__menu nav__menu--categories"><a href="categories.html" class="nav__menu_link">categories</a></li>
+    <li class="nav__menu nav__menu--tags"><a href="tags.html" class="nav__menu_link">tags</a></li>
   </ul>
 
   <div class="nav__profil">
@@ -272,344 +204,103 @@
 
   </header>
 
-  <main>
+  <main class="main">
 
-    <div class="main__header">
+    <h1 class="main__title">statistics</h1>
 
-      <div class="main__header_info main__header_info--articles">
+    <div class="main__header main__header--dashboard">
 
-        <p class="main__header_info_p">
-          <span class="main__header_info_nb">42</span><br />articles
-        </p>
-
-          <div class="main__header_info_sub main__header_info_sub--articles-draft">
-            <p class="main__header_info_sub_p">
-              6 drafts
-            </p>
-          </div>
-
-          <div class="main__header_info_sub main__header_info_sub--articles-published">
-            <p class="main__header_info_sub_p">
-              36 published
-            </p>
-          </div>
-
+      <div class="chart-container box">
+        <canvas id="chart"></canvas>
       </div>
 
-      <div class="main__header_info main__header_info--categories">
+      <div class="main__header_infos">
 
-        <p class="main__header_info_p">
-          <span class="main__header_info_nb">4</span><br />categories
-        </p>
+        <div class="main__header_info main__header_info--articles">
 
-      </div>
+          <p class="main__header_info_p">
+            <span class="main__header_info_nb">42</span><br />articles
+          </p>
 
-      <div class="main__header_table_container">
+            <div class="main__header_info_sub main-dashboard__header_info_sub main-dashboard__header_info_sub--draft">
+              <p class="main__header_info_sub_p">
+                6 drafts
+              </p>
+            </div>
 
-        <h2 class="main__header_table_h2">Categories</h2>
+            <div class="main__header_info_sub main-dashboard__header_info_sub main-dashboard__header_info_sub--published">
+              <p class="main__header_info_sub_p">
+                36 published
+              </p>
+            </div>
 
-        <table class="table main__header_table">
-          <thead>
-            <tr>
-              <th>
-                Name
-              </th>
-              <th>
-                Description
-              </th>
-              <th>
-                Articles
-              </th>
-              <th>
-                Shortcut
-              </th>
-            </tr>
-          </thead>
-          <tr>
-            <th>
-              <p>
-                Retro
-              </p>
-            </th>
-            <th>
-              <p>
-                Description
-              </p>
-            </th>
-            <th>
-              <p>
-                13
-              </p>
-            </th>
-            <th>
-              <p>
-                !!!!!
-              </p>
-            </th>
-          </tr>
-          <tr>
-            <th>
-              <p>
-                Sport
-              </p>
-            </th>
-            <th>
-              <p>
-                Description
-              </p>
-            </th>
-            <th>
-              <p>
-                13
-              </p>
-            </th>
-            <th>
-              <p>
-                !!!!!
-              </p>
-            </th>
-          </tr>
-          <tr>
-            <th>
-              <p>
-                Trail
-              </p>
-            </th>
-            <th>
-              <p>
-                Description
-              </p>
-            </th>
-            <th>
-              <p>
-                13
-              </p>
-            </th>
-            <th>
-              <p>
-                !!!!!
-              </p>
-            </th>
-          </tr>
-          <tr>
-            <th>
-              <p>
-                Electric
-              </p>
-            </th>
-            <th>
-              <p>
-                Electric powered motorcycles
-              </p>
-            </th>
-            <th>
-              <p>
-                13
-              </p>
-            </th>
-            <th>
-              <p>
-                !!!!!
-              </p>
-            </th>
-          </tr>
-        </table>
+        </div>
+
+        <div class="main__header_info main__header_info--categories">
+
+          <p class="main__header_info_p">
+            <span class="main__header_info_nb">4</span><br />tags
+          </p>
+
+        </div>
       </div>
 
     </div>
-
-    <table class="table main__table">
-  <thead>
-    <tr>
-      <th>
-        Image
-      </th>
-      <th>
-        Name
-      </th>
-      <th>
-        Preview
-      </th>
-      <th>
-        Created
-      </th>
-      <th>
-        Last modification
-      </th>
-      <th>
-        Status
-      </th>
-      <th>
-        Shortcuts
-      </th>
-    </tr>
-  </thead>
-
-  <tr>
-    <th class="table__data_article_img"><img src="img/articles/motorcycle.jpg" /></th>
-    <th class="table__data_article_title">
-      <p>
-        An incredible motorcycle !
-      </p>
-    </th>
-    <th class="table__data_article_desc">
-      <p>
-        Yesterday, I discovered a new motor cycle in a old garage !
-      </p>
-    </th>
-    <th class="table__data_article_created">
-      <p>
-        2 days ago
-      </p>
-    </th>
-    <th class="table__data_article_modified">
-      <p>
-        23 minutes ago
-      </p>
-    </th>
-    <th class="table__data_article_status">
-      <p class="table__data_article_status_p table__data_article_status_p--published">
-        Published
-      </p>
-    </th>
-    <th class="table__data_article_shortcuts">
-      <a><i onClick="JavaScript:shortcut_settings()" class="fas fa-cog table__data_article_shortcut table__data_article_shortcut--settings"></i></a>
-      <a><i onClick="JavaScript:shortcut_delete()" class="fas fa-trash-alt table__data_article_shortcut table__data_article_shortcut--delete"></i></a>
-      <a><i onClick="JavaScript:shortcut_category()" class="fas fa-th-list table__data_article_shortcut table__data_article_shortcut--category"></i></a>
-    </th>
-  </tr>
-
-  <tr>
-    <th class="table__data_article_img"><img src="img/articles/motorcycle2.jpg" /></th>
-    <th class="table__data_article_title">
-      <p>
-        The last motorcycle of Feather Industries
-      </p>
-    </th>
-    <th class="table__data_article_desc">
-      <p>
-        Yesterday, I discovered a new motor cycle in a old garage !
-      </p>
-    </th>
-    <th class="table__data_article_created">
-      <p>
-        2 days ago
-      </p>
-    </th>
-    <th class="table__data_article_modified">
-      <p>
-        23 minutes ago
-      </p>
-    </th>
-    <th class="table__data_article_status">
-      <p class="table__data_article_status_p table__data_article_status_p--draft">
-        Draft
-      </p>
-    </th>
-    <th class="table__data_article_shortcuts">
-      <a><i onClick="JavaScript:shortcut_settings()" class="fas fa-cog table__data_article_shortcut table__data_article_shortcut--settings"></i></a>
-      <a><i onClick="JavaScript:shortcut_delete()" class="fas fa-trash-alt table__data_article_shortcut table__data_article_shortcut--delete"></i></a>
-      <a><i onClick="JavaScript:shortcut_category()" class="fas fa-th-list table__data_article_shortcut table__data_article_shortcut--category"></i></a>
-    </th>
-  </tr>
-
-  <tr>
-    <th class="table__data_article_img"><img src="img/articles/motorcycle.jpg" /></th>
-    <th class="table__data_article_title">
-      <p>
-        An incredible motorcycle !
-      </p>
-    </th>
-    <th class="table__data_article_desc">
-      <p>
-        Yesterday, I discovered a new motor cycle in a old garage !
-      </p>
-    </th>
-    <th class="table__data_article_created">
-      <p>
-        2 days ago
-      </p>
-    </th>
-    <th class="table__data_article_modified">
-      <p>
-        23 minutes ago
-      </p>
-    </th>
-    <th class="table__data_article_status">
-      <p class="table__data_article_status_p table__data_article_status_p--published">
-        Published
-      </p>
-    </th>
-    <th class="table__data_article_shortcuts">
-      <a><i onClick="JavaScript:shortcut_settings()" class="fas fa-cog table__data_article_shortcut table__data_article_shortcut--settings"></i></a>
-      <a><i onClick="JavaScript:shortcut_delete()" class="fas fa-trash-alt table__data_article_shortcut table__data_article_shortcut--delete"></i></a>
-      <a><i onClick="JavaScript:shortcut_category()" class="fas fa-th-list table__data_article_shortcut table__data_article_shortcut--category"></i></a>
-    </th>
-  </tr>
-
-  <tr>
-    <th class="table__data_article_img"><img src="img/articles/motorcycle.jpg" /></th>
-    <th class="table__data_article_title">
-      <p>
-        An incredible motorcycle !
-      </p>
-    </th>
-    <th class="table__data_article_desc">
-      <p>
-        Yesterday, I discovered a new motor cycle in a old garage !
-      </p>
-    </th>
-    <th class="table__data_article_created">
-      <p>
-        2 days ago
-      </p>
-    </th>
-    <th class="table__data_article_modified">
-      <p>
-        23 minutes ago
-      </p>
-    </th>
-    <th class="table__data_article_status">
-      <p class="table__data_article_status_p table__data_article_status_p--published">
-        Published
-      </p>
-    </th>
-    <th class="table__data_article_shortcuts">
-      <a><i onClick="JavaScript:shortcut_settings()" class="fas fa-cog table__data_article_shortcut table__data_article_shortcut--settings"></i></a>
-      <a><i onClick="JavaScript:shortcut_delete()" class="fas fa-trash-alt table__data_article_shortcut table__data_article_shortcut--delete"></i></a>
-      <a><i onClick="JavaScript:shortcut_category()" class="fas fa-th-list table__data_article_shortcut table__data_article_shortcut--category"></i></a>
-    </th>
-  </tr>
-
-</table>
-
-<nav class="pagination is-centered" role="navigation" aria-label="pagination">
-  <a class="pagination-previous">Previous</a>
-  <a class="pagination-next">Next page</a>
-  <ul class="pagination-list">
-    <li><a class="pagination-link is-current" aria-label="Goto page 1">1</a></li>
-    <li><span class="pagination-ellipsis">&hellip;</span></li>
-    <li><a class="pagination-link" aria-label="Goto page 45">45</a></li>
-    <li><a class="pagination-link" aria-label="Page 46" aria-current="page">46</a></li>
-    <li><a class="pagination-link" aria-label="Goto page 47">47</a></li>
-    <li><span class="pagination-ellipsis">&hellip;</span></li>
-    <li><a class="pagination-link" aria-label="Goto page 86">86</a></li>
-  </ul>
-</nav>
 
   </main>
 
   <footer class="footer">
   <p class="footer__credit">
-    Developed by <a href="http://melvin-lemoine.me" target="_blank" class="footer__credit_link">Melvin Lemoine</a> with <a href="https://bulma.io" target="_blank" class="footer__credit_link">Bulma</a> for <a href="https://www.digital-campus.fr/ecole/rennes" target="_blank" class="footer__credit_link">Digital Campus
-        </p>
-      </footer>
+    Developed by <a href="http://melvin-lemoine.me" target="_blank" class="footer__credit_link">Melvin Lemoine</a> with <a href="https://bulma.io" target="_blank" class="footer__credit_link">Bulma</a> for <a href="https://www.digital-campus.fr/ecole/rennes" target="_blank" class="footer__credit_link">Digital Campus</a>
+    <br />pre-ALPHA version</p>
+</footer>
 
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E=" crossorigin="anonymous"></script>
   <script src="js/main.js"></script>
   <script src="js/login.js"></script>
   <script src="js/shortcuts.js"></script>
   <script src="js/nav-selector.js"></script>
+  <script src="js/charts.js"></script>
+  <script type="text/javascript">
+    var ctx = document.getElementById("chart").getContext('2d');
+    var chart = new Chart(ctx, {
+      type: 'line',
+      data: {
+        labels: ["january", "frebruary", "march", "april", "may", "june", "jully", "august", "september", "october", "november", "december"],
+        datasets: [{
+          label: 'Views number',
+          data: [30, 7, 18, 31, 56, 112, 140, 150, 155, 160, 155, 140],
+          backgroundColor: [
+            'rgba(0, 0, 0, 0.2)',
+            'rgba(54, 162, 235, 0.2)',
+            'rgba(255, 206, 86, 0.2)',
+            'rgba(75, 192, 192, 0.2)',
+            'rgba(153, 102, 255, 0.2)',
+            'rgba(255, 159, 64, 0.2)'
+          ],
+          borderColor: [
+            'rgba(255,99,132,1)',
+            'rgba(54, 162, 235, 1)',
+            'rgba(255, 206, 86, 1)',
+            'rgba(75, 192, 192, 1)',
+            'rgba(153, 102, 255, 1)',
+            'rgba(255, 159, 64, 1)'
+          ],
+          borderWidth: 1
+        }]
+      },
+      options: {
+        scales: {
+          yAxes: [{
+            ticks: {
+              beginAtZero: true
+            }
+          }]
+        }
+      }
+    });
+  </script>
+
   <script type="text/javascript">
     nav_selector("dashboard");
   </script>

@@ -8,8 +8,8 @@ function nav_selector(pagename) {
     case "articles":
       $(".nav__menu--articles")[0].style.backgroundColor = "grey";
       break;
-    case "categories":
-      $(".nav__menu--articles")[0].style.backgroundColor = "grey";
+    case "tags":
+      $(".nav__menu--tags")[0].style.backgroundColor = "grey";
       break;
     default:
       alert("%cnav-selector ERROR", "background-color:red;color:white");

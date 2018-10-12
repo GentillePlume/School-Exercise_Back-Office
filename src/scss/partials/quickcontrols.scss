@@ -3,12 +3,12 @@
   position: fixed;
   bottom: 25px;
   right: 25px;
-  width: 25vw;
+  width: auto;
   height: auto;
   /* justify-content: flex-end; */
   align-items: flex-end;
   flex-flow: column-reverse;
-  /* background-color: rgba(0, 0, 0, .1); */
+  // background-color: rgba(0, 0, 0, .1);
   z-index: 1;
 }
 
@@ -20,7 +20,7 @@
   padding: 12.5px 0;
   justify-content: flex-end;
   align-items: center;
-  /* background-color: rgba(255, 0, 0, .1); */
+  // background-color: rgba(255, 0, 0, .1);
 }
 
 .quickcontrols__menu_overlay {
@@ -30,7 +30,7 @@
   transform: translateX(-52.5px);
   border-radius: 50px 0 0 50px;
   transition: all .3s ease-in-out 0s;
-  /* background-color: red; */
+  // background-color: red;
   z-index: 0;
   animation-duration: .3s !important;
 }
@@ -72,7 +72,7 @@
   animation-duration: .5s !important;
 }
 
-.button__add_sub--articles {
+.button__add_sub--article {
   background-color: blue;
 }
 

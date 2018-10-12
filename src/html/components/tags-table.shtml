@@ -1,0 +1,114 @@
+<table class="table main__table">
+  <thead>
+    <tr>
+      <th>
+        Name
+      </th>
+      <th>
+        Description
+      </th>
+      <th>
+        Articles
+      </th>
+      <th>
+        Shortcuts
+      </th>
+    </tr>
+  </thead>
+  <tr>
+    <th>
+      <p>
+        Retro
+      </p>
+    </th>
+    <th>
+      <p>
+        Description
+      </p>
+    </th>
+    <th>
+      <p class="tag is-warning">
+        1
+      </p>
+      <p class="tag is-success">
+        3
+      </p>
+    </th>
+    <th>
+      <a><i onClick="JavaScript:shortcut_tags_edit()" class="fas fa-cog table__data_article_shortcut table__data_article_shortcut--settings"></i></a>
+      <a><i onClick="JavaScript:shortcut_delete()" class="fas fa-trash-alt table__data_article_shortcut table__data_article_shortcut--delete"></i></a>
+    </th>
+  </tr>
+  <tr>
+    <th>
+      <p>
+        Sport
+      </p>
+    </th>
+    <th>
+      <p>
+        Description
+      </p>
+    </th>
+    <th>
+      <p class="tag is-warning">
+        1
+      </p>
+      <p class="tag is-success">
+        3
+      </p>
+    </th>
+    <th>
+      <a><i onClick="JavaScript:shortcut_tags_edit()" class="fas fa-cog table__data_article_shortcut table__data_article_shortcut--settings"></i></a>
+      <a><i onClick="JavaScript:shortcut_delete()" class="fas fa-trash-alt table__data_article_shortcut table__data_article_shortcut--delete"></i></a>
+    </th>
+  </tr>
+  <tr>
+    <th>
+      <p>
+        Trail
+      </p>
+    </th>
+    <th>
+      <p>
+        Description
+      </p>
+    </th>
+    <th>
+      <p class="tag is-warning">
+        1
+      </p>
+      <p class="tag is-success">
+        3
+      </p>
+    </th>
+    <th>
+      <a><i onClick="JavaScript:shortcut_tags_edit()" class="fas fa-cog table__data_article_shortcut table__data_article_shortcut--settings"></i></a>
+      <a><i onClick="JavaScript:shortcut_delete()" class="fas fa-trash-alt table__data_article_shortcut table__data_article_shortcut--delete"></i></a>
+    </th>
+  </tr>
+  <tr>
+    <th>
+      <p>
+        Electric
+      </p>
+    </th>
+    <th>
+      <p>
+        Electric powered motorcycles
+      </p>
+    </th>
+    <th>
+      <p class="tag is-warning">
+        1
+      </p>
+      <p class="tag is-success">
+        3
+      </p>
+    </th>
+    <th>
+      <a><i onClick="JavaScript:shortcut_tags_edit()" class="fas fa-cog table__data_article_shortcut table__data_article_shortcut--settings"></i></a>
+      <a><i onClick="JavaScript:shortcut_delete()" class="fas fa-trash-alt table__data_article_shortcut table__data_article_shortcut--delete"></i></a>
+    </th>
+  </tr>
+</table>

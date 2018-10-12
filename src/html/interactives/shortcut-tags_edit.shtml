@@ -1,0 +1,44 @@
+<div id="shortcut-tags_edit" class="interactive-popup interactive-popup--new-article animated fadeIn">
+  <div id="shortcut-tags_edit__box" class="interactive-popup__box interactive-popup__box--new-article animated jackInTheBox">
+
+    <p class="interactive-popup__box_message">
+      Quick edition
+    </p>
+
+    <form class="interactive-popup__box--new-article_form">
+
+      <div class="field">
+        <label class="label">Title</label>
+        <div class="control">
+          <input class="input" type="text" value="Actual title">
+        </div>
+        </div>
+
+        <!-- <div class="field">
+          <label class="label">Description</label>
+          <div class="control">
+            <textarea class="textarea" placeholder="Article content"></textarea>
+          </div>
+        </div> -->
+
+        <div id="editor-container" class="box box--editor">
+          <div id="editor-tags_edit">
+            <p>
+              Actual description
+            </p>
+            <p><br></p>
+          </div>
+        </div>
+
+    </form>
+
+    <button class="interactive-popup__box_button button is-warning is-large is-rounded">
+      cancel
+    </button>
+
+    <button class="interactive-popup__box_button button is-success is-large is-rounded">
+      save
+    </button>
+
+  </div>
+</div>

@@ -3,41 +3,48 @@
 @import url('https://fonts.googleapis.com/css?family=Poiret+One');
 @import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro');
 
-.main__header {
-  display: flex;
-  width: auto;
-  height: auto;
-  justify-content: center;
-  align-items: center;
-}
-
-.main__header>* {
-  margin: 0 25px;
-}
-
-main {
+.main {
   display: flex;
   width: 100vw;
-  height: auto;
-  margin: 50px 0;
-  flex-flow: column wrap;
-  justify-content: center;
+  min-height: 100vh;
+  padding: 125px 0;
+  flex-flow: column;
+  justify-content: flex-start;
   align-items: center;
+
+  &__title{
+    text-align: center;
+    width: 100%;
+    font-size: 75px;
+    font-family: Montserrat;
+    text-transform: uppercase;
+  }
+
+  &__header {
+    display: flex;
+    min-width: 80vw;
+    width: auto;
+    max-width: 100%;
+    height: auto;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+  }
 }
 
-.main__header_table_container{
-display: flex;
-flex-flow: column;
-justify-content: center;
-align-items: center;
-}
-
-.main__header_table_h2{
+.main__header_filters_h2{
   font-size: 40px;
   margin-bottom: 15px;
   font-family: Montserrat;
   font-weight: bold;
   text-transform: uppercase;
+}
+
+.main__header_table_container{
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .main__header_info {
@@ -48,74 +55,55 @@ align-items: center;
   align-items: center;
   width: 300px;
   height: 300px;
-}
 
-.main__header_info_p{
-  text-align: center;
-  padding: 25px;
-  font-family: Montserrat;
-  font-size: 50px;
-  line-height: 1;
-}
+  &_p{
+    text-align: center;
+    padding: 25px;
+    font-family: Montserrat;
+    font-size: 50px;
+    line-height: 1;
+    color: white;
+  }
 
-.main__header_info--articles::before{
+    &_nb {
+      font-size: 150px;
+    }
+
+    &--articles {
+      background-color: blue;
+    }
+
+    &--categories {
+      background-color: purple;
+    }
+
+    &_sub{
+      display: flex;
+      position: absolute;
+      bottom: 0;
+      width: 40%;
+      height: 50px;
+      justify-content: center;
+      align-items: center;
+      padding: 10px;
+      z-index: 2;
+    }
+
+    &_sub_p{
+      color: white;
+      font-family: "Poiret One";
+      font-weight: bold;
+      text-align: center;
+    }
+  }
+
+.main__header_filters_container_loader{
+  display: inline-block;
   position: absolute;
-  bottom: 0;
-  width: 100px;
-  height: 100px;
-  // border-radius: 50%;
-  background-color: green;
-  z-index: 999;
-}
-
-.main__header_info--articles::after{
-  position: absolute;
-  bottom: 0;
-  width: 100px;
-  height: 100px;
-  // border-radius: 50%;
-  background-color: orange;
-  z-index: 999;
-}
-
-.main__header_info_nb {
-  font-size: 150px;
-}
-
-.main__header_info--articles {
-  color: white;
-  background-color: blue;
-}
-
-.main__header_info--categories {
-  color: white;
-  background-color: purple;
-}
-
-.main__header_info_sub{
-  display: flex;
-  position: absolute;
-  bottom: 0;
-  width: 40%;
-  height: 50px;
-  justify-content: space-around;
-  align-items: center;
-  padding: 10px;
-  // border-radius: 25px;
-}
-
-.main__header_info_sub--articles-draft{
-  transform: translate(-50%, 25px);
-  background-color: orange;
-}
-
-.main__header_info_sub--articles-published{
-  transform: translate(50%, 25px);
-  background-color: green;
-}
-
-.main__header_info_sub_p{
-  color: white;
-  font-family: "Poiret One";
-  font-weight: bold;
+  top: 0;
+  right: 0;
+  margin: 5px;
+  width: 75px;
+  opacity: 0;
+  transition: opacity .3s ease-in-out;
 }

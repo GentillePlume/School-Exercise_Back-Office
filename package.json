@@ -24,6 +24,13 @@
       ],
       "extensions": "js",
       "quiet": false
+    },
+    "img-build": {
+      "patterns": [
+        "src/img/"
+      ],
+      "extensions": "*",
+      "quiet": false
     }
   },
   "scripts": {
@@ -32,7 +39,9 @@
     "css-watch": "npm-watch css-build",
     "html-watch": "npm-watch html-build",
     "js-build": "copyfiles -u 2 src/js/*.js dist/js",
+    "img-build": "copyfiles -u 2 src/img/* dist/img",
     "js-watch": "npm-watch js-build",
+    "img-watch": "npm-watch img-build",
     "start": "concurrently 'npm:*-watch'",
     "build": "concurrently 'npm:*-build'"
   },
@@ -50,7 +59,10 @@
     "animate.css": "^3.7.0",
     "balloon-css": "^0.5.0",
     "bulma": "^0.7.1",
+    "chartjs": "^0.3.24",
     "concurrently": "^4.0.1",
+    "copyfiles": "^2.1.0",
+    "countup.js": "^1.9.3",
     "font-awesome": "^4.7.0",
     "node-sass": "^4.9.3",
     "npm-watch": "^0.4.0",

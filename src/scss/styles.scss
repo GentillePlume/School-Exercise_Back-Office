@@ -5,6 +5,9 @@
 // @import url(../../node_modules/font-awesome/css/font-awesome.min.css);
 @import url(../../node_modules/animate.css/animate.min.css);
 @import url(../../node_modules/balloon-css/balloon.min.css);
+@import url(../../node_modules/quill/dist/quill.snow.css);
+// @import url(../../node_modules/quill/dist/quill.core.css);
+// @import url(../../node_modules/quill/dist/quill.bubble.css);
 
 // LAYOUTS
 @import "./panel.scss";
@@ -12,16 +15,21 @@
 // PAGES
 @import "./login.scss";
 @import "./articles.scss";
+@import "./tags.scss";
 @import "./dashboard.scss";
 
 // PARTIALS
+@import "src/scss/partials/checkboxes.scss";
 @import "./partials/quickcontrols.scss";
+@import "./partials/table-shortcuts.scss";
 
 // INTERACTIVE
 @import "./interactives/interactives-popups.scss";
 
-@import "./interactives/shortcut-delete.scss";
-@import "./interactives/shortcut-settings.scss";
+@import "./interactives/shortcut_delete.scss";
+@import "./interactives/shortcut-articles_edit.scss";
+@import "./interactives/shortcut-tags_edit.scss";
+@import "./interactives/shortcut-articles_tags.scss";
 
 // COMPONENTS
 @import "./components/articles-table.scss";

@@ -11,9 +11,12 @@
 
 <body>
 
-  <!--#include file="interactives/shortcut-delete.shtml" -->
-  <!--#include file="interactives/shortcut-new-article.shtml" -->
-  <!--#include file="interactives/shortcut-settings.shtml" -->
+  <!--#include file="interactives/shortcut_delete.shtml" -->
+  <!--#include file="interactives/shortcut-articles_new.shtml" -->
+  <!--#include file="interactives/shortcut-articles_edit.shtml" -->
+  <!--#include file="interactives/shortcut-tags_new.shtml" -->
+  <!--#include file="interactives/shortcut-tags_edit.shtml" -->
+  <!--#include file="interactives/shortcut-articles_tags.shtml" -->
 
   <!--#include file="partials/quickcontrols.shtml" -->
 
@@ -23,148 +26,88 @@
 
   </header>
 
-  <main>
+  <main class="main">
 
-    <div class="main__header">
+    <div class="main__header main__header--articles">
 
-      <div class="main__header_info main__header_info--articles">
+      <div class="main__header_info main__header_info--articles main-articles__header_info--articles">
 
         <p class="main__header_info_p">
           <span class="main__header_info_nb">42</span><br />articles
         </p>
 
-          <div class="main__header_info_sub main__header_info_sub--articles-draft">
+          <div class="main__header_info_sub main-articles__header_info_sub main-articles__header_info_sub--draft">
             <p class="main__header_info_sub_p">
-              6 drafts
-            </p>
+              6<br />drafts
+          </p>
           </div>
 
-          <div class="main__header_info_sub main__header_info_sub--articles-published">
+          <div class="main__header_info_sub main-articles__header_info_sub main-articles__header_info_sub--published">
             <p class="main__header_info_sub_p">
-              36 published
-            </p>
+              36<br />published
+          </p>
           </div>
 
       </div>
 
-      <div class="main__header_info main__header_info--categories">
+      <div class="box main-articles__header_filters_container">
 
-        <p class="main__header_info_p">
-          <span class="main__header_info_nb">4</span><br />categories
-        </p>
+        <img src="img/loader.svg" class="main__header_filters_container_loader"/>
 
-      </div>
+        <h2 class="main__header_filters_h2">filters</h2>
 
-      <div class="main__header_table_container">
+        <label class="label">Tags</label>
 
-        <h2 class="main__header_table_h2">Categories</h2>
+        <label class="control-KY control--checkbox">Retro
+      		<input type="checkbox" id="Retro"/>
+      		<div class="control__indicator"></div>
+      	</label>
 
-        <table class="table main__header_table">
-          <thead>
-            <tr>
-              <th>
-                Name
-              </th>
-              <th>
-                Description
-              </th>
-              <th>
-                Articles
-              </th>
-              <th>
-                Shortcut
-              </th>
-            </tr>
-          </thead>
-          <tr>
-            <th>
-              <p>
-                Retro
-              </p>
-            </th>
-            <th>
-              <p>
-                Description
-              </p>
-            </th>
-            <th>
-              <p>
-                13
-              </p>
-            </th>
-            <th>
-              <p>
-                !!!!!
-              </p>
-            </th>
-          </tr>
-          <tr>
-            <th>
-              <p>
-                Sport
-              </p>
-            </th>
-            <th>
-              <p>
-                Description
-              </p>
-            </th>
-            <th>
-              <p>
-                13
-              </p>
-            </th>
-            <th>
-              <p>
-                !!!!!
-              </p>
-            </th>
-          </tr>
-          <tr>
-            <th>
-              <p>
-                Trail
-              </p>
-            </th>
-            <th>
-              <p>
-                Description
-              </p>
-            </th>
-            <th>
-              <p>
-                13
-              </p>
-            </th>
-            <th>
-              <p>
-                !!!!!
-              </p>
-            </th>
-          </tr>
-          <tr>
-            <th>
-              <p>
-                Electric
-              </p>
-            </th>
-            <th>
-              <p>
-                Electric powered motorcycles
-              </p>
-            </th>
-            <th>
-              <p>
-                13
-              </p>
-            </th>
-            <th>
-              <p>
-                !!!!!
-              </p>
-            </th>
-          </tr>
-        </table>
+        <label class="control-KY control--checkbox">Sport
+      		<input type="checkbox" id="Sport"/>
+      		<div class="control__indicator"></div>
+      	</label>
+
+        <label class="control-KY control--checkbox">Trail
+      		<input type="checkbox" id="Trail"/>
+      		<div class="control__indicator"></div>
+      	</label>
+
+        <label class="control-KY control--checkbox">Electric
+      		<input type="checkbox" id="Electric"/>
+      		<div class="control__indicator"></div>
+      	</label>
+
+        <div class="field">
+          <label class="label">Search</label>
+          <p class="control has-icons-left">
+            <input class="input main__header_filters_input" type="text" placeholder="Type a word">
+            <span class="icon is-small is-left">
+              <i class="fas fa-search"></i>
+            </span>
+          </p>
+        </div>
+
+
+        <div class="select">
+          <select id="select1" class="main__header_filters_select">
+            <option disabled selected="true">Choose a status</option>
+            <option>Published</option>
+            <option>Draft</option>
+            <option>Archived</option>
+          </select>
+        </div>
+
+        <div class="select">
+          <select class="main__header_filters_select">
+            <option disabled selected="true">Choose a time</option>
+            <option>all</option>
+            <option>> 1 month</option>
+            <option>> 3 month</option>
+            <option>> 6 month</option>
+          </select>
+        </div>
+
       </div>
 
     </div>
@@ -179,9 +122,24 @@
   <script src="js/main.js"></script>
   <script src="js/login.js"></script>
   <script src="js/shortcuts.js"></script>
+  <script src="js/search.js"></script>
   <script src="js/nav-selector.js"></script>
+  <script src="../node_modules/quill/dist/quill.min.js"></script>
   <script type="text/javascript">
     nav_selector("articles");
+  </script>
+  <script>
+    var quill = new Quill('#editor-tags_new', {
+      theme: 'snow',
+      placeholder: 'Category description...'
+    });
+    var quill2 = new Quill('#editor-articles_new', {
+      theme: 'snow',
+      placeholder: 'Article content'
+    });
+    var quill3 = new Quill('#editor-articles_edit', {
+      theme: 'snow'
+    });
   </script>
 </body>
 

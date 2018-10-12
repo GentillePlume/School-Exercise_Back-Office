@@ -8,6 +8,7 @@ console.log("main.js launched");
 
 var button__add_sub = $(".button__add_sub");
 var button__add_main = $(".button__add--main");
+var quickcontrols__menu = $(".quickcontrols__menu");
 var button__add_icon_main = $(".button__add_icon--cross");
 var button_lever = false;
 
@@ -17,6 +18,9 @@ button__add_main.click(function() {
 
     button__add_sub[0].style.display = "flex";
     button__add_sub[1].style.display = "flex";
+
+    quickcontrols__menu[0].style.display = "flex";
+    quickcontrols__menu[1].style.display = "flex";
 
     button__add_icon_main[0].style.transform = "rotate(0deg)";
     button__add_main[0].style.backgroundColor = "red";
@@ -63,11 +67,11 @@ button__add_main.click(function() {
     // button__add_sub[1].style.opacity = "0";
     button__add_sub[1].style.pointerEvents = "none";
 
-    // setTimeout(function() {
-    // setTimeout(function() {
-    //   button__add_sub[0].style.display = "none";
-    //   button__add_sub[1].style.display = "none";
-    // }, 1000)
+    setTimeout(function() {
+      console.log("undisplayed !");
+      quickcontrols__menu[0].style.display = "none";
+      quickcontrols__menu[1].style.display = "none";
+    }, 400)
 
 
     button_lever = false;
@@ -77,11 +81,11 @@ button__add_main.click(function() {
   }
 })
 
-$(".button__add_sub--articles").mouseenter(function() {
+$(".button__add_sub--article").mouseenter(function() {
   $(".quickcontrols__menu_overlay--articles")[0].style.width = $(".quickcontrols__menu_name--articles").width() + $(".button__add_sub").width() + "px";
   $(".quickcontrols__menu_name--articles")[0].style.display = "inline-block";
 })
-$(".button__add_sub--articles").mouseleave(function() {
+$(".button__add_sub--article").mouseleave(function() {
   $(".quickcontrols__menu_overlay--articles")[0].style.width = "0%";
   $(".quickcontrols__menu_name--articles")[0].style.display = "none";
 })

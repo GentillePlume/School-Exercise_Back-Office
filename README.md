@@ -51,4 +51,8 @@ npm run build
 ## Login page
 ![login page](https://i.imgur.com/BbsRVxh.jpg)
 ## Dashboard page
-![login page](https://i.imgur.com/AGszHdC.png)
+![login page](https://i.imgur.com/BGPNrFq.png)
+## Articles page
+![login page](https://i.imgur.com/c8gFXss.png)
+## Tags page
+![login page](https://i.imgur.com/Y71LEYc.png)

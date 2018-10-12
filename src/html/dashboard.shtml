@@ -7,13 +7,14 @@
 
   <link rel="stylesheet" type="text/css" href="css/styles.min.css" />
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+  <!-- <script src="../node_modules/chartjs/chart.js"></script> -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.min.js"></script>
 </head>
 
 <body>
 
-  <!--#include file="interactives/shortcut-delete.shtml" -->
-  <!--#include file="interactives/shortcut-new-article.shtml" -->
-  <!--#include file="interactives/shortcut-settings.shtml" -->
+  <!--#include file="interactives/shortcut-articles_new.shtml" -->
+  <!--#include file="interactives/shortcut-tags_new.shtml" -->
 
   <!--#include file="partials/quickcontrols.shtml" -->
 
@@ -23,153 +24,48 @@
 
   </header>
 
-  <main>
+  <main class="main">
 
-    <div class="main__header">
+    <h1 class="main__title">statistics</h1>
 
-      <div class="main__header_info main__header_info--articles">
+    <div class="main__header main__header--dashboard">
 
-        <p class="main__header_info_p">
-          <span class="main__header_info_nb">42</span><br />articles
-        </p>
-
-          <div class="main__header_info_sub main__header_info_sub--articles-draft">
-            <p class="main__header_info_sub_p">
-              6 drafts
-            </p>
-          </div>
-
-          <div class="main__header_info_sub main__header_info_sub--articles-published">
-            <p class="main__header_info_sub_p">
-              36 published
-            </p>
-          </div>
-
+      <div class="chart-container box">
+        <canvas id="chart"></canvas>
       </div>
 
-      <div class="main__header_info main__header_info--categories">
+      <div class="main__header_infos">
 
-        <p class="main__header_info_p">
-          <span class="main__header_info_nb">4</span><br />categories
-        </p>
+        <div class="main__header_info main__header_info--articles">
 
-      </div>
+          <p class="main__header_info_p">
+            <span class="main__header_info_nb">42</span><br />articles
+          </p>
 
-      <div class="main__header_table_container">
+            <div class="main__header_info_sub main-dashboard__header_info_sub main-dashboard__header_info_sub--draft">
+              <p class="main__header_info_sub_p">
+                6 drafts
+              </p>
+            </div>
 
-        <h2 class="main__header_table_h2">Categories</h2>
+            <div class="main__header_info_sub main-dashboard__header_info_sub main-dashboard__header_info_sub--published">
+              <p class="main__header_info_sub_p">
+                36 published
+              </p>
+            </div>
 
-        <table class="table main__header_table">
-          <thead>
-            <tr>
-              <th>
-                Name
-              </th>
-              <th>
-                Description
-              </th>
-              <th>
-                Articles
-              </th>
-              <th>
-                Shortcut
-              </th>
-            </tr>
-          </thead>
-          <tr>
-            <th>
-              <p>
-                Retro
-              </p>
-            </th>
-            <th>
-              <p>
-                Description
-              </p>
-            </th>
-            <th>
-              <p>
-                13
-              </p>
-            </th>
-            <th>
-              <p>
-                !!!!!
-              </p>
-            </th>
-          </tr>
-          <tr>
-            <th>
-              <p>
-                Sport
-              </p>
-            </th>
-            <th>
-              <p>
-                Description
-              </p>
-            </th>
-            <th>
-              <p>
-                13
-              </p>
-            </th>
-            <th>
-              <p>
-                !!!!!
-              </p>
-            </th>
-          </tr>
-          <tr>
-            <th>
-              <p>
-                Trail
-              </p>
-            </th>
-            <th>
-              <p>
-                Description
-              </p>
-            </th>
-            <th>
-              <p>
-                13
-              </p>
-            </th>
-            <th>
-              <p>
-                !!!!!
-              </p>
-            </th>
-          </tr>
-          <tr>
-            <th>
-              <p>
-                Electric
-              </p>
-            </th>
-            <th>
-              <p>
-                Electric powered motorcycles
-              </p>
-            </th>
-            <th>
-              <p>
-                13
-              </p>
-            </th>
-            <th>
-              <p>
-                !!!!!
-              </p>
-            </th>
-          </tr>
-        </table>
+        </div>
+
+        <div class="main__header_info main__header_info--categories">
+
+          <p class="main__header_info_p">
+            <span class="main__header_info_nb">4</span><br />tags
+          </p>
+
+        </div>
       </div>
 
     </div>
-
-    <!--#include file="components/articles-table.shtml" -->
 
   </main>
 
@@ -180,6 +76,47 @@
   <script src="js/login.js"></script>
   <script src="js/shortcuts.js"></script>
   <script src="js/nav-selector.js"></script>
+  <script src="js/charts.js"></script>
+  <script type="text/javascript">
+    var ctx = document.getElementById("chart").getContext('2d');
+    var chart = new Chart(ctx, {
+      type: 'line',
+      data: {
+        labels: ["january", "frebruary", "march", "april", "may", "june", "jully", "august", "september", "october", "november", "december"],
+        datasets: [{
+          label: 'Views number',
+          data: [30, 7, 18, 31, 56, 112, 140, 150, 155, 160, 155, 140],
+          backgroundColor: [
+            'rgba(0, 0, 0, 0.2)',
+            'rgba(54, 162, 235, 0.2)',
+            'rgba(255, 206, 86, 0.2)',
+            'rgba(75, 192, 192, 0.2)',
+            'rgba(153, 102, 255, 0.2)',
+            'rgba(255, 159, 64, 0.2)'
+          ],
+          borderColor: [
+            'rgba(255,99,132,1)',
+            'rgba(54, 162, 235, 1)',
+            'rgba(255, 206, 86, 1)',
+            'rgba(75, 192, 192, 1)',
+            'rgba(153, 102, 255, 1)',
+            'rgba(255, 159, 64, 1)'
+          ],
+          borderWidth: 1
+        }]
+      },
+      options: {
+        scales: {
+          yAxes: [{
+            ticks: {
+              beginAtZero: true
+            }
+          }]
+        }
+      }
+    });
+  </script>
+
   <script type="text/javascript">
     nav_selector("dashboard");
   </script>
